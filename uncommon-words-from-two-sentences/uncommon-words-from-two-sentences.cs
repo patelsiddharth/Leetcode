@@ -1,40 +1,22 @@
-public class Solution {
-    public string[] UncommonFromSentences(string A, string B) {
-        string[] sa = A.Split(" ");
-        string[] sb = B.Split(" ");
+public class Solution 
+{
+    public string[] UncommonFromSentences(string A, string B) 
+    {
+        string ab = string.Concat(A, " ", B);
         List<string> res = new List<string>();
-        Dictionary<string, int> dictA = new Dictionary<string, int>();
-        Dictionary<string, int> dictB = new Dictionary<string, int>();
-        foreach(var a in sa)
+        Dictionary<string, int> dict = new Dictionary<string, int>();
+        foreach(var word in ab.Split(" "))
         {
-            if(dictA.ContainsKey(a))
-               dictA[a]++;
-            else
-                dictA.Add(a,1);
-        }
-        
-        foreach(var b in sb)
-        {
-            if(dictB.ContainsKey(b))
-               dictB[b]++;
-            else
-                dictB.Add(b,1);
-        }
-        
-        foreach(var dicA in dictA)
-        {
-            if(dicA.Value == 1 && !dictB.ContainsKey(dicA.Key))
+            if(dict.ContainsKey(word))
             {
-                res.Add(dicA.Key);
+                dict[word]++;
+                res.Remove(word);
             }
-        }
-        
-        foreach(var dicB in dictB)
-        {
-            if(dicB.Value == 1 && !dictA.ContainsKey(dicB.Key))
+            else
             {
-                res.Add(dicB.Key);
-            }
+                dict.Add(word,1);
+                res.Add(word);
+            }    
         }
         return res.ToArray();
     }
