@@ -2,13 +2,11 @@ public class Solution
 {
     public IList<int> SelfDividingNumbers(int left, int right) 
     {
-        int i = left;
         List<int> result = new List<int>();
-        while(i<=right)
+        for(int i = left;i<=right;i++)
         {
             if(IsSD(i))
                 result.Add(i);
-            i++;
         }
         return result;
     }
