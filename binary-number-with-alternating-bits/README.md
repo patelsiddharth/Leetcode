@@ -1,3 +1,4 @@
+[Discussion Post (created on 8/4/2021 at 0:57)](https://leetcode.com/problems/binary-number-with-alternating-bits/discuss/1196580/C-faster-than-100.00-of-C-online-submissions)  
 <h2>693. Binary Number with Alternating Bits</h2><h3>Easy</h3><hr><div><p>Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.</p>
 
 <p>&nbsp;</p>
