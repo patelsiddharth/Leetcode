@@ -2,21 +2,21 @@ public class Solution
 {
     public string Interpret(string cmd) 
     {
-        StringBuilder sb = new StringBuilder();
+        string sb = "";
         for(int i =0;i<cmd.Length;i++)
         {
             if(cmd[i] == 'G')
             {
-                sb.Append('G');
+                sb += 'G';
             }
             else if(cmd[i] == '(' && cmd[i+1] == ')')
             {
-                sb.Append('o');
+                sb += 'o';
                 i++;
             }
             else if(cmd[i] == '(' && cmd[i+1] == 'a' && cmd[i+2] == 'l' && cmd[i+3] == ')')
             {
-                sb.Append("al");
+                sb += "al";
                 i += 3;
             }
         }
