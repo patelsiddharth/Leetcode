@@ -1,32 +1,27 @@
 public class Solution {
     public string MergeAlternately(string word1, string word2) 
     {
-        int len = word1.Length + word2.Length;
-        bool selectOne = true;
         StringBuilder sb = new StringBuilder();
         
-        int a = 0, b = 0;
-        for(int i = 0; i < len; i++)
+        int len1 = word1.Length, len2 = word2.Length;
+        
+        int min = (len1 < len2) ? len1 : len2;
+        
+        for(int i = 0; i < min; i++)
         {
-            if(selectOne && a < word1.Length)
-            {
-                sb.Append(word1[a]);
-                a++;
-                if(b < word2.Length)
-                {
-                    selectOne = false;
-                }
-            }
-            else if(!selectOne && b < word2.Length)
-            {
-                sb.Append(word2[b]);
-                b++;
-                if(a < word1.Length)
-                {
-                    selectOne = true;
-                }
-            }
+            sb.Append(word1[i]);
+            sb.Append(word2[i]);
         }
+        
+        if(min == len1)
+        {
+            sb.Append(word2.Substring(min, len2-min));
+        }
+        else
+        {
+            sb.Append(word1.Substring(min, len1-min));
+        }
+        
         return sb.ToString();
     }
 }
