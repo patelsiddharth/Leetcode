@@ -1,3 +1,4 @@
+[Discussion Post (created on 30/5/2021 at 21:26)](https://leetcode.com/problems/length-of-last-word/discuss/1307304/C-Solution-Using-trim-and-split)  
 <h2>58. Length of Last Word</h2><h3>Easy</h3><hr><div><p>Given a string <code>s</code> consists of some words separated by spaces, return <em>the length of the last word&nbsp;in the string. If the last word does not exist, return </em><code>0</code>.</p>
 
 <p>A <strong>word</strong> is a maximal substring consisting&nbsp;of non-space characters only.</p>
