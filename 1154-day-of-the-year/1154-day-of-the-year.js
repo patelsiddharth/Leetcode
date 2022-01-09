@@ -4,8 +4,8 @@
  */
 var dayOfYear = function(date) {
     let year = parseInt(date.substring(0, 4)),
-        month = parseInt(date[5] == "0" ? date[6] : date.substring(5, 7)),
-        day = parseInt(date[8] == "0" ? date[9] : date.substring(8)),
+        month = parseInt(date.substring(5, 7)),
+        day = parseInt(date.substring(8)),
         daysInEachMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
     
     if((year%4 == 0 && year%100 != 0) || year%400 == 0)
