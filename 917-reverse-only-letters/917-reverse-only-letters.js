@@ -2,24 +2,38 @@
  * @param {string} s
  * @return {string}
  */
+
 var reverseOnlyLetters = function(s) {
-    let temp = [];
-    for(let i in s)
+    const isLetter = (charCode) => ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122));
+    let start = 0, end = s.length - 1, res = Array.from(s), startChar, endChar;
+    while(start < end)
     {
-        const ch = s.charCodeAt(i)
-        if(ch >= 65 && ch <= 90 || ch >= 97 && ch <= 122)
+        startChar = s.charCodeAt(start);
+        endChar = s.charCodeAt(end);
+        if(isLetter(startChar))
         {
-            temp.push(String.fromCharCode(ch));
+            if(isLetter(endChar))
+            {
+                [res[start], res[end]] = [s[end], s[start]];
+                start++;
+            }
+            end--;
+        }
+        else if(isLetter(endChar))
+        {
+            if(isLetter(startChar))
+            {
+                [res[start], res[end]] = [s[end], s[start]];
+                end--;
+            }
+            start++;
+        }
+        else
+        {
+            start++;
+            end--;
         }
     }
     
-    let res = "";
-    
-    for(let i in s)
-    {
-        const ch = s.charCodeAt(i)
-        res += (ch >= 65 && ch <= 90 || ch >= 97 && ch <= 122) ? temp.pop() : s[i];
-    }
-    
-    return res;
+    return res.join('');
 };
