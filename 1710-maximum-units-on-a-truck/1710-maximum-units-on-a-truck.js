@@ -4,23 +4,18 @@
  * @return {number}
  */
 var maximumUnits = function(boxTypes, truckSize) {
-    let result = 0, breakLoop = false;
-    boxTypes.sort((a,b) => b[1] - a[1]);
-    boxTypes.every(box => {
-        console.log(box);
+    let result = 0;
+    
+    boxTypes.sort((a,b) => b[1] - a[1]).every(box => {
         for(let i = 0; i < box[0]; i++)
         {
             result += box[1];
             truckSize--;
             if(truckSize == 0)
-            {
-                breakLoop = true;
-                break;
-            }    
+                return false;
         }
-        if(breakLoop)
-            return false;
         return true;
     });
+    
     return result;
 };
