@@ -4,16 +4,9 @@
  * @return {number}
  */
 var findFinalValue = function(nums, original) {
-    while(true)
+    while(nums.includes(original))
     {
-        if(nums.includes(original))
-        {
-            original *= 2;
-        }
-        else
-        {
-            break;
-        }
+        original *= 2;
     }
     return original;
 };
