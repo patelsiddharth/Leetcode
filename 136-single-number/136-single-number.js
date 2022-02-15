@@ -3,20 +3,9 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let res = [];
+    let res = {};
     nums.forEach((num, index) => {
-        if(!res.includes(num))
-        {
-            res.push(num)
-        }
-        else
-        {
-            const idx = res.findIndex(i => i === num)
-            if(idx > -1)
-            {
-                res.splice(idx,1);
-            }
-        }
+        res[num] = res[num] ? res[num] + 1 : 1;
     });
-    return res[0];
+    return parseInt(Object.entries(res).find(a => a[1] == 1));
 };
