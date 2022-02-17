@@ -10,11 +10,11 @@ var findErrorNums = function(nums) {
         count = nums.filter(x => x === num).length;
         if(count === 2)
         {
-            res.unshift(num);
+            res[0] = num;
         }
         else if(count === 0)
         {
-            res.push(num);
+            res[1] = num;
         }
     }
     return res;
