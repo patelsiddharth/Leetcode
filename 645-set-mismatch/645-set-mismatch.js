@@ -3,26 +3,18 @@
  * @return {number[]}
  */
 var findErrorNums = function(nums) {
-    let res = [], obj = {};
-    
-    nums.forEach(num => {
-        if(obj[num])
-        {
-            res.unshift(num);
-            obj[num]++;
-        }
-        else
-        {
-            obj[num] = 1;
-        }
-    })
+    let res = [], count;
     
     for(let num = 1; num <= nums.length; num++)
     {
-        if(!nums.includes(num))
+        count = nums.filter(x => x === num).length;
+        if(count === 2)
+        {
+            res.unshift(num);
+        }
+        else if(count === 0)
         {
             res.push(num);
-            break;
         }
     }
     return res;
