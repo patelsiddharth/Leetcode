@@ -5,16 +5,11 @@
 var triangularSum = function(nums) {
     while(nums.length !== 1)
     {
-        nums = sum(nums);
+        for(let i = 0; i < nums.length - 1; i++)
+        {
+            nums[i] = (nums[i] + nums[i + 1]) % 10;
+        }
+        nums.length--;
     }
     return nums[0];
 };
-
-function sum(nums) {
-    let newArr = [];
-    for(let i = 0; i < nums.length - 1; i++)
-    {
-        newArr.push((nums[i] + nums[i + 1]) % 10)
-    }
-    return newArr;
-}
