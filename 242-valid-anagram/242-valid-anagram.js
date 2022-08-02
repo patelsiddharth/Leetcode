@@ -4,7 +4,16 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-    const newS = s.split("").sort().join()
-    const newT = t.split("").sort().join()
-    return newS === newT;
+    if(s.length !== t.length)
+        return false;
+    
+    const arrS = new Array(26).fill(0);
+    
+    for(let i = 0; i < s.length; i++)
+    {
+        arrS[s.charCodeAt(i) - 97]++;
+        arrS[t.charCodeAt(i) - 97]--;
+    }
+    
+    return !arrS.some(i => i!==0);
 };
