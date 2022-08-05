@@ -3,26 +3,24 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-    let arr = [], max = 0;
-    for(let char of s) {
-        if(!arr.includes(char))
+    let max = 0, charSet = new Set();
+    let left = 0, right = 0;
+    for(right in s) {
+        // console.log(right)
+        if(!charSet.has(s[right]))
         {
-            arr.push(char);
+            charSet.add(s[right]);
         }
         else
         {
-            if(arr[0] === char)
+            while(charSet.has(s[right]))
             {
-                arr.splice(0,1);
+                charSet.delete(s[left]);
+                left++;
             }
-            else
-            {
-                index = arr.findIndex(i => i === char)
-                arr.splice(0, index + 1)
-            }
-            arr.push(char);
+            charSet.add(s[right]);
         }
-        max = Math.max(max, arr.length)
+        max = Math.max(right - left + 1, max)
     }
     return max;
 };
