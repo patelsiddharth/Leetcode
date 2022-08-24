@@ -9,9 +9,7 @@ var longestConsecutive = function(nums) {
     })
     
     nums.forEach(num => {
-        if(obj[num-1])
-            return
-        else
+        if(!obj[num-1])
         {
             let temp = num, tempRes=1;
             while(obj[temp + 1])
