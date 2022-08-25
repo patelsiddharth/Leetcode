@@ -5,10 +5,10 @@
  */
 var canBeTypedWords = function(text, brokenLetters) {
     let res = 0, obj = {};
+    
     brokenLetters.split("").forEach(letter => {
         obj[letter] = 1;
     })
-    console.log(obj)
     
     text.split(" ").forEach(word => {
         let temp = true;
