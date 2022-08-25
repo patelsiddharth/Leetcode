@@ -4,23 +4,23 @@
  * @return {number}
  */
 var canBeTypedWords = function(text, brokenLetters) {
-    let res = 0, obj = {};
+    let res = 0, brokenCharacterMap = {};
     
     brokenLetters.split("").forEach(letter => {
-        obj[letter] = 1;
+        brokenCharacterMap[letter] = 1;
     })
     
     text.split(" ").forEach(word => {
-        let temp = true;
+        let canTypeChar = true;
         for(let char of word)
         {
-            if(obj[char])
+            if(brokenCharacterMap[char])
             {
-                temp = false;
+                canTypeChar = false;
                 break;
             }
         }
-        if(temp)
+        if(canTypeChar)
         {
             res++;
         }
