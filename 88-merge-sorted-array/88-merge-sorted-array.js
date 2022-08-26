@@ -18,14 +18,14 @@ var merge = function(nums1, m, nums2, n) {
     
     let i = m-1, j = n-1, len = m + n - 1;
     
-    while(i >= 0 && j >= 0)
+    while(i >= 0 || j >= 0)
     {
-        if(nums1[i] > nums2[j])
+        if(nums1[i] > nums2[j] || j < 0)
         {
             nums1[len] = nums1[i]
             i--;
         }
-        else
+        else if(nums1[i] <= nums2[j] || i < 0)
         {
             nums1[len] = nums2[j]
             j--;
@@ -33,17 +33,17 @@ var merge = function(nums1, m, nums2, n) {
         len--;
     }
     
-    while(i >= 0)
-    {
-        nums1[len] = nums1[i]
-        i--;
-        len--
-    }
+//     while(i >= 0)
+//     {
+//         nums1[len] = nums1[i]
+//         i--;
+//         len--
+//     }
     
-    while(j >= 0)
-    {
-        nums1[len] = nums2[j]
-        j--;
-        len--
-    }
+//     while(j >= 0)
+//     {
+//         nums1[len] = nums2[j]
+//         j--;
+//         len--
+//     }
 };
