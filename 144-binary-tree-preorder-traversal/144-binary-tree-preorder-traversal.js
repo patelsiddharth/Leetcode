@@ -10,19 +10,23 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+
 var preorderTraversal = function(root) {
-    let res = [];
+    if(root === null)
+        return [];
     
-    const preOrder = function(root) {
-        if(root === null)
-            return;
+    let res = [], stack = [root];
+    
+    while(stack.length > 0)
+    {
+        let x = stack.pop();
+        res.push(x.val)
+        if(x.right !== null)
+            stack.push(x.right)
         
-        res.push(root.val)
-        preOrder(root.left)
-        preOrder(root.right)
+        if(x.left !== null)
+            stack.push(x.left)
     }
-    
-    preOrder(root);
     
     return res;
 };
