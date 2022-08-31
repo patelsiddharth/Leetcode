@@ -19,7 +19,7 @@ var setZeroes = function(matrix) {
                         visitedMap[[i,k]] = 1;
                     }
                 }
-                for(let k = 0; k < matrix.length; k++)
+                for(let k = 0; k <= row; k++)
                 {
                     if(matrix[k][j] !== 0)
                     {
@@ -32,5 +32,4 @@ var setZeroes = function(matrix) {
             visitedMap[[i,j]] = 1;
         }
     }
-    console.log(matrix);
 };
