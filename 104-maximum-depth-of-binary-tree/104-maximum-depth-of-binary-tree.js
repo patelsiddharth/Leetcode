@@ -11,15 +11,8 @@
  * @return {number}
  */
 var maxDepth = function(root) {
-    let leftH = 0, rightH = 0;
     if(root === null)
         return 0;
     
-    if(root.left !== null)
-        leftH = maxDepth(root.left)
-    
-    if(root.right !== null)
-        rightH = maxDepth(root.right)
-    
-    return 1 + Math.max(leftH, rightH)
+    return 1 + Math.max(maxDepth(root.right), maxDepth(root.left))
 };
