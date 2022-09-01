@@ -16,17 +16,11 @@ var isBalanced = function(root) {
             return 0;
         
         let lh = getHeight(root.left)
-        if(lh === -1)
-            return -1;
         
         let rh = getHeight(root.right)
-        if(rh === -1)
-            return -1;
         
-        if(Math.abs(lh-rh) > 1)
-        {
+        if(lh === -1 || rh === -1 || Math.abs(lh-rh) > 1)
             return -1;
-        }
         
         return 1 + Math.max(lh, rh)
     }
