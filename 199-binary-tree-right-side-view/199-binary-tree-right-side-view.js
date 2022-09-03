@@ -16,7 +16,7 @@
 // 4
 var rightSideView = function(root) {
     if(root === null)
-        return []
+        return [];
     
     let queue = [root], res = [];
     
@@ -26,11 +26,11 @@ var rightSideView = function(root) {
         
         res.push(temp.val)
         
-        for(let i = 0; i < size; i++)
+        for(let i = size - 1; i >= 0; i--)
         {
-            let t = queue.pop();
-            t.right && queue.unshift(t.right)
-            t.left && queue.unshift(t.left);
+            let t = queue.shift();
+            t.left && queue.push(t.left);
+            t.right && queue.push(t.right)
         }
     }
     
