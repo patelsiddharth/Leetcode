@@ -12,11 +12,8 @@ var breakPalindrome = function(palindrome) {
         let start = 0, end = str.length - 1
         while(start < end)
         {
-            if(str[start] !== str[end])
+            if(str[start++] !== str[end--])
                 return false;
-            
-            start++;
-            end--;
         }
         
         return true;
@@ -34,13 +31,12 @@ var breakPalindrome = function(palindrome) {
             }
             else
             {
-                onlyA = false;
-                break;
+                return t.join("")
             }
         }
     }
-    if(onlyA)
-        t[t.length - 1] = 'b';
+    
+    t[t.length - 1] = 'b';
     
     return t.join("")
 };
