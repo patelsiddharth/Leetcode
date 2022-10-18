@@ -12,17 +12,17 @@
  * @return {TreeNode}
  */
 var buildTree = function(inorder, postorder) {
+    let obj = {}
+    inorder.forEach((node, index) => obj[node] = index)
     const constructTree = function(start, end) {
         if(start > end)
             return null;
         
         let root = new TreeNode(postorder.pop());
-        let idx = inorder.findIndex(val => val === root.val)
-        if(idx > -1)
-        {
-            root.right = constructTree(idx + 1, end)
-            root.left = constructTree(start, idx - 1)
-        }
+        
+        let idx = obj[root.val];
+        root.right = constructTree(idx + 1, end)
+        root.left = constructTree(start, idx - 1)
         return root;
     }
     
