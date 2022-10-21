@@ -7,33 +7,17 @@ var greatestLetter = function(s) {
     for(let i = 0; i < s.length; i++)
     {
         let code = s.charCodeAt(i)
-        if(code <= 90)
+        let idx = (code <= 90) ? code - 65 : code - 97
+        if(obj[idx])
         {
-            if(obj[code - 65])
+            if(!obj[idx].includes(s[i]))
             {
-                if(!obj[code - 65].includes(s[i]))
-                {
-                    obj[code - 65].push(s[i])
-                }
-            }
-            else
-            {
-                obj[code - 65] = [s[i]]
+                obj[idx].push(s[i])
             }
         }
         else
         {
-            if(obj[code - 97])
-            {
-                if(!obj[code - 97].includes(s[i]))
-                {
-                    obj[code - 97].push(s[i])
-                }
-            }
-            else
-            {
-                obj[code - 97] = [s[i]]
-            }
+            obj[idx] = [s[i]]
         }
     }
     
