@@ -4,23 +4,16 @@
  * @return {boolean}
  */
 var containsNearbyDuplicate = function(nums, k) {
-    let left = 0, obj = {};
+    let obj = {};
     
-    while(left <= nums.length - 1)
+    for(let i = 0; i < nums.length; i++)
     {
-        if(!obj[nums[left]])
+        if(Object.hasOwnProperty.call(obj, nums[i]) && Math.abs(i - obj[nums[i]]) <= k)
         {
-            obj[nums[left]] = [left]
+            return true;   
         }
-        else
-        {
-            let temp = obj[nums[left]]
-            if(left - temp[temp.length - 1] <= k)
-                return true;
-            else
-                obj[nums[left]].push(left)
-        }
-        left++;
+        
+        obj[nums[i]] = i;
     }
     return false;
 };
