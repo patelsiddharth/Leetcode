@@ -18,29 +18,14 @@ var isBalanced = function(root) {
         let lh = getHeight(node.left)
         let rh = getHeight(node.right)
         
+        if(lh === -1 || rh === -1)
+            return -1;
+        
+        if(Math.abs(lh - rh) > 1)
+            return -1;
+        
         return 1 + Math.max(lh, rh)
     }
     
-    const checkTree = function(node) {
-        if(node === null)
-            return true;
-        
-        let lh = getHeight(node.left)
-        let rh = getHeight(node.right)
-        
-        if(Math.abs(lh - rh) > 1)
-        {
-            return false;
-        }
-        
-        let l = checkTree(node.left)
-        let r = checkTree(node.right)
-        
-        if(!l || !r)
-            return false;        
-        
-        return true;
-    }
-    
-    return checkTree(root);
+    return getHeight(root) !== -1;
 };
