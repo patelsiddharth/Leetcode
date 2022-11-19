@@ -12,17 +12,17 @@
  * @return {number}
  */
 var kthSmallest = function(root, k) {
-    let res = []
+    let res = 0;
     const findElement = function(node) {
         if(node === null)
             return;
         
         findElement(node.left);
-        res.push(node.val);
+        k--;
+        if(k === 0)
+            res = node.val
         findElement(node.right);
     }
-    
     findElement(root);
-    
-    return res[k-1];
+    return res;
 };
