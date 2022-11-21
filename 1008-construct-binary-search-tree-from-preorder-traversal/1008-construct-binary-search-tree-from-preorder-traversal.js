@@ -25,24 +25,23 @@ var bstFromPreorder = function(preorder) {
         {   
             if(node.val > preorder[index])
             {
-                if(node.left !== null)
-                    node = node.left;
-                else
+                if(node.left === null)
                 {
-                    node.left = new TreeNode(preorder[index]);;
+                    node.left = new TreeNode(preorder[index]);
                     break;
-                }
+                }    
+                
+                node = node.left;
             }
             else
             {
-                if(node.right !== null)
-                    node = node.right;
-                else
+                if(node.right === null)
                 {
-                    node.right = new TreeNode(preorder[index]);;
+                    node.right = new TreeNode(preorder[index]);
                     break;
                 }
-                    
+                
+                node = node.right;    
             }
         }
         makeTree(index + 1);
