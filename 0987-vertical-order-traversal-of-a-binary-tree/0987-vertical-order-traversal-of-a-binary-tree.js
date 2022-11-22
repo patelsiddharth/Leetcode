@@ -22,10 +22,8 @@ var verticalTraversal = function(root) {
             let item = queue.shift()
             if(!obj[item.x])
             {
-                obj[item.x] = {}
-                
-                obj[item.x][item.y] = [item.node.val]
-                // obj[item.x] = { item.y : [item.node.val] }
+                obj[item.x] = {};
+                obj[item.x][item.y] = [item.node.val];
             }
             else
             {
@@ -43,7 +41,7 @@ var verticalTraversal = function(root) {
             item.node.right && queue.push({ node : item.node.right, x : item.x + 1, y : item.y + 1})
         }
     }
-    console.log(obj)
+    
     let sortedKeys = Object.keys(obj).sort((a,b) => +a - +b)
     return sortedKeys.reduce((acc, key) => {
         let temp = []
@@ -52,10 +50,5 @@ var verticalTraversal = function(root) {
         }
         acc.push(temp)
         return acc; 
-    }, [])
-    // return []
-    // return Object.keys(obj).sort((a,b) => +a - +b).reduce((acc, curr) => {
-    //     acc.push(obj[curr].sort())
-    //     return acc
-    // }, []);
+    }, []);
 };
