@@ -141,11 +141,6 @@ class Solution {
   	            return { size : 0, max : Number.NEGATIVE_INFINITY, min : Number.POSITIVE_INFINITY }
   		    }
   		    
-  		    if(node.left === null && node.right === null)
-  		    {
-  		        return { size : 1, max : node.key, min : node.key }
-  		    }
-  		    
   		    let lh = postOrder(node.left)
   		    let rh = postOrder(node.right)
   		    
