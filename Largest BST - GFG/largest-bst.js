@@ -148,10 +148,8 @@ class Solution {
   		    {
   		        return { size : 1 + lh.size + rh.size, max : Math.max(node.key, rh.max), min : Math.min(node.key, lh.min) }
   		    }
-  		    else
-  		    {
-  		        return { size : Math.max(lh.size, rh.size), max : Number.POSITIVE_INFINITY, min : Number.NEGATIVE_INFINITY }
-  		    }
+  		    
+  	        return { size : Math.max(lh.size, rh.size), max : Number.POSITIVE_INFINITY, min : Number.NEGATIVE_INFINITY }
   		}
   		
   		let res = postOrder(root)
