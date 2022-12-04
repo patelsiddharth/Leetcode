@@ -15,13 +15,12 @@ var halvesAreAlike = function(s) {
         'O' : 0, 
         'U' : 0
     }
-    let left = 0, right = s.length - 1, lc = 0, rc = 0;
-    while(left < right)
+    let left = 0, len = s.length - 1, lc = 0, rc = 0;
+    while(left < len / 2)
     {
         obj.hasOwnProperty(s[left]) && lc++;
-        obj.hasOwnProperty(s[right]) && rc++;
+        obj.hasOwnProperty(s[len - left]) && rc++;
         left++;
-        right--;
     }
     return lc === rc
 };
