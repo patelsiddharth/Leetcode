@@ -8,7 +8,13 @@ var fib = function(n) {
         if(n <= 1)
             return n;
         
-        return findFib(n-1) + findFib(n-2);
+        if(dp[n]) 
+        {
+            return dp[n];
+        }
+        
+        dp[n] = findFib(n-1) + findFib(n-2);
+        return dp[n];
     }
     
     return findFib(n)
