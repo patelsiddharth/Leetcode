@@ -11,19 +11,23 @@
  * @return {number[]}
  */
 var preorder = function(root) {
-    let res = []
+    if(root === null) return [];
     
-    const pre = function(node) {
-        if(node === null) return null;
+    let res = [], queue = [root];
+    
+    while(queue.length > 0)
+    {
+        let temp = queue.pop();
+        res.push(temp.val);
         
-        res.push(node.val);
-        if(node.children !== null)
+        if(temp.children !== null)
         {
-            node.children.forEach(child => pre(child));
+            for(let i = temp.children.length - 1; i >= 0; i--)
+            {
+                queue.push(temp.children[i]);
+            }
         }
     }
-    
-    pre(root);
     
     return res;
 };
