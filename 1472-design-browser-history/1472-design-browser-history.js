@@ -24,18 +24,8 @@ BrowserHistory.prototype.visit = function(url) {
  * @return {string}
  */
 BrowserHistory.prototype.back = function(steps) {
-    if((this.currentUrlIndex - steps) < 0)
-    {
-        steps = 0;
-    }
-    else
-    {
-        steps = this.currentUrlIndex - steps;
-    }
-    
-    this.currentUrlIndex = steps;
-    
-    return this.urlList[steps];
+    this.currentUrlIndex = Math.max(0, this.currentUrlIndex - steps);
+    return this.urlList[this.currentUrlIndex];
 };
 
 /** 
@@ -43,18 +33,8 @@ BrowserHistory.prototype.back = function(steps) {
  * @return {string}
  */
 BrowserHistory.prototype.forward = function(steps) {
-    if((this.currentUrlIndex + steps) >= this.urlList.length)
-    {
-        steps = this.urlList.length - 1;
-    }
-    else
-    {
-        steps = this.currentUrlIndex + steps;
-    }
-    
-    this.currentUrlIndex = steps;
-    
-    return this.urlList[steps];
+    this.currentUrlIndex = Math.min(this.urlList.length - 1, this.currentUrlIndex + steps);
+    return this.urlList[this.currentUrlIndex];
 };
 
 /** 
