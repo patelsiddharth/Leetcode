@@ -3,7 +3,7 @@
  * @return {number}
  */
 var zeroFilledSubarray = function(nums) {
-    let count = 0, zc = 0;
+    let res = 0, zc = 0;
     for(let i = 0; i < nums.length; i++)
     {
         if(nums[i] === 0)
@@ -12,14 +12,10 @@ var zeroFilledSubarray = function(nums) {
         }
         else
         {
-            count += (zc*(zc+1))/2;
+            res += (zc*(zc+1))/2;
             zc = 0;
         }
     }
-    if(zc !== 0)
-    {
-        count += (zc*(zc+1))/2;
-    }
-    
-    return count;
+    res += (zc*(zc+1))/2;
+    return res;
 };
