@@ -33,11 +33,14 @@ var KthLargest = function(k, nums) {
  * @return {number}
  */
 KthLargest.prototype.add = function(val) {
-    let index = 0, res = -1, added = false;
-    let node = new List(val);
+    let res = -1, 
+        index = 0,
+        added = false,
+        node = new List(val);
+    
     if(this.head === null)
     {
-        this.head = new List(val);
+        this.head = node;
         return val;
     }
     else if(this.head.next === null)
@@ -51,6 +54,7 @@ KthLargest.prototype.add = function(val) {
         {
             this.head.next = node;
         }
+        
         return this.k === 1 ? this.head.val : val;
     }
     else if(this.head.val <= val)
