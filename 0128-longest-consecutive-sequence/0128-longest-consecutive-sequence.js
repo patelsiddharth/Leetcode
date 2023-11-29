@@ -9,19 +9,17 @@ var longestConsecutive = function(nums) {
     });
     
     let maxLen = 0;
-    for(let i = 0; i < nums.length; i++)
-    {
-        if(!obj[nums[i] - 1])
+    nums.forEach(num => {
+        if(!obj[num - 1])
         {
-            let n = 1, len = 1;
-            while(obj[nums[i] + n])
+            let len = 1;
+            while(obj[num + len])
             {
                 len++;
-                n++;
             }
             maxLen = Math.max(maxLen, len);
         }
-    }
+    });
     
     return maxLen;
 };
