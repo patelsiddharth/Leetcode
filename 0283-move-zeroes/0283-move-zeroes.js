@@ -3,9 +3,6 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-    if(nums.length === 1)
-        return;
-    
     let left = 0;
     for(let idx = 0; idx < nums.length; idx++)
     {
