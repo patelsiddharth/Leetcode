@@ -3,7 +3,9 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    let arr = new Array(nums.length + 1).fill(0);
-    nums.forEach(num => arr[num] = 1);
-    return arr.findIndex(i => i === 0);
+    let len = nums.length;
+    let sum = len * (len + 1) / 2;
+    let numsSum = nums.reduce((acc, curr) => acc + curr)
+    
+    return sum - numsSum;
 };
