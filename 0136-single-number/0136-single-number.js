@@ -3,20 +3,11 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let obj = {}
+    let xor = 0;
    
     nums.forEach(num => {
-        if(!obj[num])
-        {
-            obj[num] = 1    
-        }
-        else
-        {
-            obj[num] += 1;
-        }
-    })
+        xor = xor ^ num
+    });
     
-    const res = Object.entries(obj).find(elm => elm[1] === 1)
-    
-    return res[0]
+    return xor
 };
