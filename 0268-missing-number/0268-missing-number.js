@@ -3,16 +3,7 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    let obj = {};
-    nums.forEach(num => obj[num] = 1)
-    
-    for(let i = 0; i <= nums.length; i++)
-    {
-        if(!obj.hasOwnProperty(i))
-        {
-            return i;
-        }
-    }
-    
-    return -1;
+    let arr = new Array(nums.length + 1).fill(0);
+    nums.forEach(num => arr[num] = 1);
+    return arr.findIndex(i => i === 0);
 };
