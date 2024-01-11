@@ -4,10 +4,7 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    let obj = {};
-    nums.forEach((num, index) => {
-        obj[num] = index
-    })
+    const obj = {};
     
     for(let index = 0; index < nums.length; index++)            
     {
@@ -16,6 +13,7 @@ var twoSum = function(nums, target) {
         {
             return [index, obj[otherPart]];
         }
+        obj[nums[index]] = index
     }
     
     return [];
