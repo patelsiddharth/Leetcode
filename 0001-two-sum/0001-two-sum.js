@@ -4,18 +4,19 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    let obj = {}, res = [];
+    let obj = {};
     nums.forEach((num, index) => {
         obj[num] = index
     })
     
-    nums.forEach((num, index) => {
-        const otherPart = target - num;
+    for(let index = 0; index < nums.length; index++)            
+    {
+        const otherPart = target - nums[index];
         if(obj.hasOwnProperty(otherPart) && index !== obj[otherPart])
         {
-            res = [index, obj[otherPart]];
+            return [index, obj[otherPart]];
         }
-    })
+    }
     
-    return res;
+    return [];
 };
