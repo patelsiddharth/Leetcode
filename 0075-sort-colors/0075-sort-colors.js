@@ -25,6 +25,5 @@ var sortColors = function(nums) {
             nums[mid] = temp;
             high--;
         }
-        console.log(nums)
     }
 };
