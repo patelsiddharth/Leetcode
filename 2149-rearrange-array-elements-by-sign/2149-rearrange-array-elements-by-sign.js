@@ -3,20 +3,19 @@
  * @return {number[]}
  */
 var rearrangeArray = function(nums) {
-    let neg = [], pos = [], res = [], idx = 0;
-    neg = nums.filter(num => num < 0);
-    pos = nums.filter(num => num > 0);
+    let ni = 1, pi = 0, res = [];
     
     for(let i = 0; i < nums.length; i++)
     {
-        if(i % 2 === 0)
+        if(nums[i] > 0)
         {
-            res.push(pos[idx]);
+            res[pi] = nums[i];
+            pi = pi + 2;
         }
         else
         {
-            res.push(neg[idx]);
-            idx++;
+            res[ni] = nums[i];
+            ni = ni + 2;
         }
     }
     return res;
