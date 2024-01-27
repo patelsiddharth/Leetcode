@@ -12,7 +12,6 @@ var rotate = function(matrix) {
             matrix[j][i] = temp;
         }
     }
-    console.log(matrix)
     
     for(let i = 0; i < matrix.length; i++)
     {
