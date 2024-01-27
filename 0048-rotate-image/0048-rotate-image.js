@@ -15,14 +15,6 @@ var rotate = function(matrix) {
     
     for(let i = 0; i < matrix.length; i++)
     {
-        let left = 0, right = matrix[0].length - 1;
-        while(left <= right)
-        {
-            let temp = matrix[i][left];
-            matrix[i][left] = matrix[i][right];
-            matrix[i][right] = temp;
-            left++;
-            right--;
-        }
+        matrix[i].reverse();
     }
 };
