@@ -3,15 +3,19 @@
  * @return {number}
  */
 var fib = function(n) {
-    if(n <= 1) return n;
-    let prev1 = 1, prev2 = 0, curr;
+    let dp = []
     
-    for(let i = 2; i <= n; i++)
-    {
-        curr = prev1 + prev2;
-        prev2 = prev1;
-        prev1 = curr
+    function fibn(i) {
+        if(i <= 1)
+            return i;
+        
+        if(!dp[i])
+        {
+            dp[i] = fibn(i - 1) + fib(i - 2);    
+        }
+        
+        return dp[i];
     }
     
-    return prev1;
+    return fibn(n)
 };
