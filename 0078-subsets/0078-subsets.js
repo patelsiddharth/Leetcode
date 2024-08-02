@@ -7,13 +7,15 @@ var subsets = function(nums) {
     function ss(arr, idx) {
         if(idx === nums.length)
         {
-            res.push(arr)
+            res.push([...arr]);
             return; 
         }
         
-        ss([...arr, nums[idx]], idx + 1)
+        arr.push(nums[idx]);
+        ss(arr, idx + 1);
         
-        ss(arr, idx + 1)
+        arr.pop()
+        ss(arr, idx + 1);
     }
     
     ss([], 0);
