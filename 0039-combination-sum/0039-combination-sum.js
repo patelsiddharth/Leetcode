@@ -8,7 +8,7 @@ var combinationSum = function(candidates, target) {
     function cs(arr, idx, sum) {
         if(target === sum)
         {
-            res.push([...arr]);
+            res.push(arr);
             return;
         }
         
@@ -17,12 +17,8 @@ var combinationSum = function(candidates, target) {
             return;
         }
         
-        arr.push(candidates[idx])
-        sum += candidates[idx]
-        cs(arr, idx, sum);
+        cs([...arr, candidates[idx]], idx, sum + candidates[idx]);
         
-        arr.pop();
-        sum -= candidates[idx]
         cs(arr, idx + 1, sum);
     }
     
