@@ -4,29 +4,25 @@
  */
 var permute = function(nums) {
     let res = [];
-    function per(arrtemp, arrMap) {
-        if(arrtemp.length === arrMap.length)
+    function perm(arr, mapping, idx) {
+        if(arr.length === nums.length)
         {
-            res.push([...arrtemp])
+            res.push(arr)
             return;
         }
         
-        for(let i = 0; i < arrMap.length; i++)
+        for(let i = 0; i < nums.length; i++) 
         {
-            if(arrMap[i] === 0)
+            if(mapping[i] === 0)
             {
-                arrMap[i] = 1;
-                arrtemp.push(nums[i]);
-                
-                per(arrtemp, arrMap);
-                
-                arrMap[i] = 0;
-                arrtemp.pop();
+                mapping[i] = 1;
+                perm([...arr, nums[i]], mapping, i + 1);
+                mapping[i] = 0; 
             }
         }
     }
     
-    per([], new Array(nums.length).fill(0));
+    perm([], new Array(nums.length).fill(0), 0)
     
     return res;
 };
