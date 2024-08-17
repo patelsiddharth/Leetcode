@@ -3,33 +3,23 @@
  * @return {number}
  */
 var climbStairs = function(n) {
-    let obj = {}
-    const find = function (x) {
-        if(x === 0 || x === 1) return 1;
-        
-        let left, right;
-        
-        if(obj[x-1])
+    let obj = {};
+    function climb(x) {
+        if(x === 0 || x === 1)
         {
-            left = obj[x-1];
-        }
-        else
-        {
-            left = find(x-1);
-            obj[x-1] = left;
+            return 1;
         }
         
-        if(obj[x-2])
+        if(!obj[x-1])
         {
-            right = obj[x-2];
+            obj[x-1] = climb(x - 1)
         }
-        else
+        if(!obj[x-2])
         {
-            right = find(x-2);
-            obj[x-2] = right;
+            obj[x-2] = climb(x - 2)
         }
         
-        return left + right;
+        return obj[x-1] + obj[x-2];
     }
-    return find(n)
+    return climb(n);
 };
