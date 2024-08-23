@@ -5,12 +5,12 @@
 var rob = function(nums) {
     let robData = {}
     function robHouse(idx) {
-        if(idx === nums.length - 1)
+        if(idx === 0)
         {
-            return nums[idx];
+            return nums[0];
         }
         
-        if(idx > nums.length - 1)
+        if(idx < 0)
         {
             return 0;
         }
@@ -20,11 +20,11 @@ var rob = function(nums) {
             return robData[idx];
         }
         
-        let robcurrhouse = nums[idx] + robHouse(idx + 2);
-        let notrobhouse = robHouse(idx + 1);
+        let robcurrhouse = nums[idx] + robHouse(idx - 2);
+        let notrobhouse = robHouse(idx - 1);
         
         return robData[idx] = Math.max(notrobhouse, robcurrhouse);
     }
     
-    return robHouse(0);
+    return robHouse(nums.length - 1);
 };
