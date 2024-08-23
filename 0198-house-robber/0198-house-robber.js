@@ -1,0 +1,30 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var rob = function(nums) {
+    let robData = {}
+    function robHouse(idx) {
+        if(idx === nums.length - 1)
+        {
+            return nums[idx];
+        }
+        
+        if(idx > nums.length - 1)
+        {
+            return 0;
+        }
+        
+        if(Object.hasOwn(robData, idx))
+        {
+            return robData[idx];
+        }
+        
+        let robcurrhouse = nums[idx] + robHouse(idx + 2);
+        let notrobhouse = robHouse(idx + 1);
+        
+        return robData[idx] = Math.max(notrobhouse, robcurrhouse);
+    }
+    
+    return robHouse(0);
+};
