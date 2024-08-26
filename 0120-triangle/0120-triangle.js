@@ -12,6 +12,6 @@ var minimumTotal = function(triangle) {
             frontRow[j] = triangle[i][j] + Math.min(frontRow[j], frontRow[j+1])
         }
     }
-    console.log(frontRow)
+    
     return frontRow[0];
 };
