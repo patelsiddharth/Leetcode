@@ -20,7 +20,6 @@ var maxDepth = function(root) {
     while(queue.length > 0)
     {
         let temp = queue.shift();
-        console.log(temp)
         let tempArr = []
         while(temp.length > 0)
         {
