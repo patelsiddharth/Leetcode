@@ -20,9 +20,7 @@ var binaryTreePaths = function(root) {
         
         if(node.left === null && node.right === null)
         {
-            path.push(node.val)
-            res.push(path.join('->'));
-            path.pop();
+            res.push([...path, node.val].join('->'));
             return;
         }
         
