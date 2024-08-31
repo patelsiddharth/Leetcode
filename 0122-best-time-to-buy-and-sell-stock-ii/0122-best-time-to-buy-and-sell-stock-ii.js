@@ -10,59 +10,26 @@ var maxProfit = function(prices) {
            return 0;
         }
         
-        let profit = 0;
+        if(obj.has(idx + 1 + '-' + buy))
+        {
+            return obj.get(idx + 1 + '-' + buy);
+        }
         
+        let profit = 0;
         if(buy)
-        {   
-            let bs, notBuyStock;
-            if(obj.has(idx + 1 + '-' + 0))
-            {
-                bs = obj.get(idx + 1 + '-' + 0);
-            }
-            else
-            {
-                bs = transact(idx + 1, 0);
-                obj.set(idx + 1 + '-' + 0, bs);
-            }
-            
-            if(obj.has(idx + 1 + '-' + 1))
-            {
-                nbs = obj.get(idx + 1 + '-' + 1);
-            }
-            else
-            {
-                nbs = transact(idx + 1, 1);
-                obj.set(idx + 1 + '-' + 1, nbs);
-            }
-            
-            profit = Math.max(-prices[idx] + bs, nbs)
+        {
+            let buyStock = -prices[idx] + transact(idx + 1, 0);
+            let notBuyStock = 0 + transact(idx + 1, 1);
+            profit = Math.max(buyStock, notBuyStock)
         }
         else
         {
-            let ss, nss;
-            if(obj.has(idx + 1 + '-' + 1))
-            {
-                ss = obj.get(idx + 1 + '-' + 1);
-            }
-            else
-            {
-                ss = transact(idx + 1, 1);
-                obj.set(idx + 1 + '-' + 1, ss);
-            }
-            
-            if(obj.has(idx + 1 + '-' + 0))
-            {
-                nss = obj.get(idx + 1 + '-' + 0);
-            }
-            else
-            {
-                nss = transact(idx + 1, 0);
-                obj.set(idx + 1 + '-' + 0, nss);
-            }
-            
-            profit = Math.max(prices[idx] + ss, nss);
+            let sellStock = prices[idx] + transact(idx + 1, 1);
+            let notSellStock = 0 + transact(idx + 1, 0);
+            profit = Math.max(sellStock, notSellStock);
         }
         
+        obj.set(idx + 1 + '-' + buy, profit);
         return profit;
     }
     return transact(0, 1);
