@@ -11,20 +11,21 @@
  * @return {number}
  */
 var findBottomLeftValue = function(root) {
-    let queue = [root], res = [];
-    while(queue.length)
-    {
-        let size = queue.length;
-        for(let i = 0; i < size; i++)
+    let res = [];
+    function move(node, depth) {
+        if(node === null)
         {
-            let node = queue.shift();
-            if(i === 0)
-            {
-                res.push(node.val);
-            }
-            node.left && queue.push(node.left);
-            node.right && queue.push(node.right);
+            return;
         }
+        
+        if(depth === res.length)
+        {
+            res.push(node.val);
+        }
+        
+        node.left && move(node.left, depth + 1);
+        node.right && move(node.right, depth + 1);
     }
+    move(root, 0)
     return res[res.length - 1]
 };
