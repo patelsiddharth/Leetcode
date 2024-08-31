@@ -12,40 +12,44 @@
  */
 var verticalTraversal = function(root) {
     if(root === null)
-        return null;
-    let queue = [{node : root, x : 0, y: 0}], obj = {}
-    while(queue.length !== 0)
+    {
+        return [];
+    }
+    
+    let queue = [{node : root, x : 0, y: 0}], obj = {};
+    
+    while(queue.length > 0)
     {
         let size = queue.length;
         for(let i = 0; i < size; i++)
         {
-            let item = queue.shift()
-            if(!obj[item.x])
+            let {node, x, y} = queue.shift();
+            if(!obj[x])
             {
-                obj[item.x] = {};
-                obj[item.x][item.y] = [item.node.val];
+                obj[x] = {}
+                obj[x][y] = [node.val]
             }
             else
             {
-                if(obj[item.x][item.y])
+                if(obj[x][y])
                 {
-                    obj[item.x][item.y].push(item.node.val)
+                    obj[x][y].push(node.val)
                 }
                 else
                 {
-                    obj[item.x][item.y] = [item.node.val]
+                    obj[x][y] = [node.val]
                 }
             }
             
-            item.node.left && queue.push({ node : item.node.left, x : item.x - 1, y : item.y + 1})
-            item.node.right && queue.push({ node : item.node.right, x : item.x + 1, y : item.y + 1})
+            node.left && queue.push({ node : node.left, x : x - 1, y : y + 1})
+            node.right && queue.push({ node : node.right, x : x + 1, y : y + 1})
         }
     }
     
-    let sortedKeys = Object.keys(obj).sort((a,b) => +a - +b)
+    let sortedKeys = Object.keys(obj).sort((a,b) => a - b);
     return sortedKeys.reduce((acc, key) => {
         let temp = []
-        for(y in obj[key]) {
+        for(let y in obj[key]) {
             temp.push(...obj[key][y].sort((a,b) => a - b))
         }
         acc.push(temp)
