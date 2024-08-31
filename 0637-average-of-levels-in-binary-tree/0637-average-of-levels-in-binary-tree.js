@@ -14,7 +14,7 @@ var averageOfLevels = function(root) {
     let queue = [root], res = [];
     while(queue.length)
     {
-        let size = queue.length, tempArr = [], sum = 0;
+        let size = queue.length, sum = 0;
         for(let i = 0; i < size; i++)
         {
             let node = queue.shift();
