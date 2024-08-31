@@ -26,20 +26,13 @@ var verticalTraversal = function(root) {
             let {node, x, y} = queue.shift();
             if(!obj[x])
             {
-                obj[x] = {}
-                obj[x][y] = [node.val]
+                obj[x] = {};
             }
-            else
+            if(!obj[x][y])
             {
-                if(obj[x][y])
-                {
-                    obj[x][y].push(node.val)
-                }
-                else
-                {
-                    obj[x][y] = [node.val]
-                }
+                obj[x][y] = [];
             }
+            obj[x][y].push(node.val);
             
             node.left && queue.push({ node : node.left, x : x - 1, y : y + 1})
             node.right && queue.push({ node : node.right, x : x + 1, y : y + 1})
