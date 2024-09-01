@@ -28,9 +28,9 @@ var canPlaceFlowers = function(flowerbed, n) {
             n--;
             if(n === 0)
             {
-                break;
+                return true;
             }
         }
     }
-    return n === 0;
+    return false;
 };
