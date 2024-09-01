@@ -3,7 +3,7 @@
  * @return {number}
  */
 var leastBricks = function(wall) {
-    let hash = {0: 0}, max = 0;
+    let hash = {0: 0};
     for(let i = 0; i < wall.length; i++)
     {
         let ini = 0;
