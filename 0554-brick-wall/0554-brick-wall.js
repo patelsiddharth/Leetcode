@@ -3,7 +3,7 @@
  * @return {number}
  */
 var leastBricks = function(wall) {
-    let hash = {}, max = 0;
+    let hash = {0: 0}, max = 0;
     for(let i = 0; i < wall.length; i++)
     {
         let ini = 0;
@@ -13,8 +13,5 @@ var leastBricks = function(wall) {
             hash[ini] = hash[ini] ? hash[ini] + 1 : 1;
         }
     }
-    Object.values(hash).forEach(item => {
-        max = Math.max(max, item);
-    })
-    return wall.length - max;
+    return wall.length - Math.max(...Object.values(hash));
 };
