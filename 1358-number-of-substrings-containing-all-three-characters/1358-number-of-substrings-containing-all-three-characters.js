@@ -3,7 +3,7 @@
  * @return {number}
  */
 var numberOfSubstrings = function(s) {
-    let l = 0, r = 0, sum   = 0, obj = {};
+    let l = 0, r = 0, sum = 0, obj = {};
     
     while(r < s.length)
     {
