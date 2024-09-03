@@ -18,11 +18,8 @@ var lowestCommonAncestor = function(root, p, q) {
             return node;
         }
         
-        let left = null;
-        node.left && (left = dfs(node.left));
-        
-        let right = null;
-        node.right && (right = dfs(node.right));
+        let left = dfs(node.left);
+        let right = dfs(node.right);
         
         if(left && right)
         {
