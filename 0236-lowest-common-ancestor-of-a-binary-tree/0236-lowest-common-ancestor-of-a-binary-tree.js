@@ -28,18 +28,12 @@ var lowestCommonAncestor = function(root, p, q) {
         {
             return node;
         }
-        else if(left !== null && right === null)
+        else if(left || right)
         {
-            return left;
+            return left || right;
         }
-        else if(left === null && right !== null)
-        {
-            return right
-        }
-        else
-        {
-            return null;
-        }
+        
+        return null;
     }
     
     return dfs(root);
