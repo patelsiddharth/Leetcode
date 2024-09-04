@@ -3,13 +3,23 @@
  * @return {number}
  */
 var minimumTotal = function(triangle) {
-    let len = triangle.length;
-    for(let i = len - 2; i >= 0; i--)
-    {
-        for(let j = 0; j <= i; j++)
+    let map = new Map();
+    function move(row, col) {
+        if(row === triangle.length - 1)
         {
-            triangle[len-1][j] = triangle[i][j] + Math.min(triangle[len-1][j], triangle[len-1][j+1])
+            return triangle[row][col];
         }
+        
+        if(map.has(`${row}-${col}`))
+        {
+            return map.get(`${row}-${col}`)
+        }
+        
+        let down = triangle[row][col] + move(row + 1, col);
+        let adjacent = triangle[row][col] + move(row + 1, col + 1);
+        let res = Math.min(down, adjacent);
+        map.set(`${row}-${col}`, res);
+        return res;
     }
-    return triangle[len-1][0];
+    return move(0, 0)
 };
