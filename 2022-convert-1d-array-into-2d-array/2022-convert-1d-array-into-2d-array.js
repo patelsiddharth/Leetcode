@@ -15,11 +15,7 @@ var construct2DArray = function(original, m, n) {
     {
         if((r - l) === n - 1)
         {
-            let temp = [];
-            for(let i = l; i <= r; i++)
-            {
-                temp.push(original[i])
-            }
+            let temp = original.slice(l, r + 1);
             res.push(temp)
             l = r + 1;
         }
