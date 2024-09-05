@@ -10,13 +10,14 @@ var construct2DArray = function(original, m, n) {
         return [];
     }
     
-    let l = 0, r = 0, res = [];
+    let l = 0, r = 0, res = [], temp = [];
     while(r < original.length)
     {
+        temp.push(original[r]);
         if((r - l) === n - 1)
         {
-            let temp = original.slice(l, r + 1);
-            res.push(temp)
+            res.push(temp);
+            temp = [];
             l = r + 1;
         }
         r = r + 1;
