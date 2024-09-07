@@ -15,17 +15,17 @@ var oddEvenList = function(head) {
         return head;
     }
     
-    let prev = head, curr = head.next, head2 = head.next;
+    let odd = head, even = head.next, evenHead = head.next;
     
-    while(curr !== null && curr.next !== null)
+    while(even !== null && even.next !== null)
     {
-        prev.next = curr.next;
-        curr.next = curr.next.next;
-        prev = prev.next;
-        curr = curr.next;
+        odd.next = even.next;
+        even.next = even.next.next;
+        odd = odd.next;
+        even = even.next;
     }
     
-    prev.next = head2;
+    odd.next = evenHead;
     
     return head;
 };
