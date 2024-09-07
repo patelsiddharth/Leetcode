@@ -10,7 +10,7 @@
  * @return {ListNode}
  */
 var oddEvenList = function(head) {
-    if(head === null || head.next === null || head.next.next === null)
+    if(head === null)
     {
         return head;
     }
