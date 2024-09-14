@@ -11,22 +11,44 @@
  * @param {ListNode} headB
  * @return {ListNode}
  */
-var getIntersectionNode = function(headA, headB) {
-    let map = new Map(), temp = headA;
-    while(temp != null)
+
+var nodeLength = function(node) {
+    let count = 0, temp = node;
+    while(temp !== null)
     {
-        map.set(temp, 1);
+        count++;
         temp = temp.next;
+    }
+    return count;
+}
+
+var getIntersectionNode = function(headA, headB) {
+    let tempA = headA, tempB = headB,
+        l1 = nodeLength(headA), 
+        l2 = nodeLength(headB);
+
+    if(l1 > l2)
+    {
+        while(l1 > l2)
+        {
+            l1--;
+            tempA = tempA.next;
+        }
+    }
+    else
+    {
+        while(l2 > l1)
+        {
+            l2--;
+            tempB = tempB.next;
+        }
     }
     
-    temp = headB;
-    while(temp != null)
+    while(tempA !== tempB)
     {
-        if(map.has(temp))
-        {
-            return temp;
-        }
-        temp = temp.next;
+        tempA = tempA.next;
+        tempB = tempB.next;
     }
-    return null;
+    
+    return tempA;
 };
