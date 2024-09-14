@@ -4,15 +4,27 @@
  * @return {number[]}
  */
 var topKFrequent = function(nums, k) {
-    let obj = {}
+    let res = [], obj = {}, arr = new Array(nums.length + 1);
     nums.forEach(num => {
         obj[num] = obj[num] ? obj[num] + 1 : 1;
     })
     
-    let res = [], arr = Object.entries(obj).sort((a,b) => b[1] - a[1]);
-    for(let i = 0; i < k; i++)
+    for(let i in obj)
     {
-        res.push(arr[i][0]);
+        arr[obj[i]] = arr[obj[i]] ? [...arr[obj[i]], i] : [i];
+    }
+    
+    for(let i = arr.length - 1; i > 0; i--)
+    {
+        if(k === 0)
+        {
+            break;
+        }
+        if(arr[i])
+        {
+            res.push(...arr[i])
+            k -= arr[i].length;
+        }
     }
     return res;
 };
