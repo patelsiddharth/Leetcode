@@ -11,15 +11,15 @@
  * @return {boolean}
  */
 var hasCycle = function(head) {
-    let slow = head, fast = head
-    while(fast !== null && fast.next !== null)
+    let temp = head, obj = new Map();
+    while(temp !== null)
     {
-        slow = slow.next;
-        fast = fast.next.next;
-        if(slow === fast)
+        if(obj.has(temp))
         {
             return true;
         }
+        obj.set(temp, 1);
+        temp = temp.next;
     }
     return false;
 };
