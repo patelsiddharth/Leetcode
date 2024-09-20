@@ -15,26 +15,12 @@ var middleNode = function(head) {
         return head;
     }
     
-    let len = 0, temp = head;
-    while(temp !== null)
+    let slow = head, fast = head;
+    while(fast !== null && fast.next !== null)
     {
-        len++;
-        temp = temp.next;
+        slow = slow.next;
+        fast = fast.next.next;
     }
     
-    
-    let mid = Math.floor(len/2);
-    console.log(len, mid)
-    
-    temp = head;
-    while(temp !== null)
-    {
-        mid--;
-        if(mid < 0)
-        {
-            return temp;
-        }
-        temp = temp.next;
-    }
-    return null;
+    return slow;
 };
