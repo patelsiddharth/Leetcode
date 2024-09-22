@@ -4,12 +4,7 @@
  * @return {number}
  */
 var myPow = function(x, n) {
-    let pow = n, ans = 1;
-    
-    if(pow < 0)
-    {
-        pow = -pow;
-    }
+    let pow = Math.abs(n), ans = 1;
     
     while(pow > 0)
     {
@@ -25,9 +20,5 @@ var myPow = function(x, n) {
         }
     }
     
-    if(n < 0)
-    {
-        ans = 1 / ans;
-    }
-    return ans
+    return (n < 0) ? (1 / ans) : ans
 };
