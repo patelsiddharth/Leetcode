@@ -14,17 +14,15 @@ var minEatingSpeed = function(piles, h) {
             totalHrs += Math.ceil(piles[i] / mid);
             if(totalHrs > h)
             {
+                l = mid + 1;
                 break;
             }
         }
+        
         if(totalHrs <= h)
         {
             ans = mid;
             r = mid - 1;
-        }
-        else if(totalHrs > h)
-        {
-            l = mid + 1;
         }
     }
     
