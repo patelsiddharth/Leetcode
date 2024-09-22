@@ -4,7 +4,7 @@
  * @return {number}
  */
 var minEatingSpeed = function(piles, h) {
-    let l = 1, r = Math.max(...piles), ans = 1;
+    let l = 1, r = Math.max(...piles);
     while(l <= r)
     {
         const mid = Math.floor((l+r)/2);
@@ -21,10 +21,9 @@ var minEatingSpeed = function(piles, h) {
         
         if(totalHrs <= h)
         {
-            ans = mid;
             r = mid - 1;
         }
     }
     
-    return ans;
+    return l;
 };
