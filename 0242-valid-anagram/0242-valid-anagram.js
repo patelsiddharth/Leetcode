@@ -4,25 +4,24 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-    let obj = {}, obj2 = {}
-    s.split("").forEach(i => {
-        obj[i] = obj[i] ? obj[i] + 1 : 1;
-    });
-    
-    for(let i of t)
+    let obj = {}
+    for(let ch of s)
     {
-        if(obj[i])
-        {
-            obj[i] = obj[i] - 1;
-        }
-        else
+        obj[ch] = obj[ch] ? obj[ch] + 1 : 1;
+    }
+    
+    
+    for(let ch of t)
+    {
+        if(!obj[ch])
         {
             return false;
         }
         
-        if(obj[i] === 0)
+        obj[ch] = obj[ch] - 1;
+        if(obj[ch] === 0)
         {
-            delete obj[i];
+            delete obj[ch];
         }
     }
     
