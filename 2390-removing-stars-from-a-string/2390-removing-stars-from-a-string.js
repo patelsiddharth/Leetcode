@@ -3,18 +3,18 @@
  * @return {string}
  */
 var removeStars = function(s) {
-    let arr = []
+    let res = ""
     for(char of s)
     {
         if(char === '*')
         {
-            arr.pop();
+            res = res.slice(0, -1)
         }
         else
         {
-            arr.push(char)
+            res += char;
         }
     }
     
-    return arr.join('')
+    return res;
 };
