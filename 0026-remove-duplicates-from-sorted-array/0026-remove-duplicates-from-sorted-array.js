@@ -3,11 +3,13 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    let set = new Set();
-    nums.forEach(num => set.add(num));
-    let i = 0
-    set.forEach((val) => {
-        nums[i++] = val;
-    });
-    return set.size;
+    let i = 0, j = 1;
+    while(j < nums.length) {
+        if(nums[j] !== nums[i]) {
+            nums[i + 1] = nums[j];
+            i++
+        }
+        j++;
+    }
+    return i + 1;
 };
