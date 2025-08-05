@@ -4,20 +4,22 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var rotate = function(nums, k) {
-    let tempArr = [], len = nums.length;
+    k = k % nums.length;
     
-    if(len === 1 || k === 0) return;
+    if(nums.length === 1 || k === 0) return;
 
-    k = k % len;
-    
-    for(let i = 0; i < k; i++) {
-        tempArr[i] = nums[len - k + i];
-    }
-    for(let i = len - 1; i >=0; i--) {
-        if (i - k >= 0) {
-            nums[i] = nums[i - k];
-        } else {
-            nums[i] = tempArr[i];
+    function rev(nums, start, end) {
+        let left = start, right = end;
+        while(left <= right) {
+            let temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
         }
     }
+
+    rev(nums, 0, nums.length - k - 1)
+    rev(nums, nums.length - k, nums.length - 1);
+    rev(nums, 0, nums.length - 1);
 };
