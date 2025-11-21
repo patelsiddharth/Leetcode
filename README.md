@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0283-move-zeroes](https://github.com/patelsiddharth/Leetcode/tree/master/0283-move-zeroes) |
 | [0540-single-element-in-a-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
+| [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
 ## Two Pointers
 |  |
 | ------- |
@@ -42,4 +43,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0162-find-peak-element](https://github.com/patelsiddharth/Leetcode/tree/master/0162-find-peak-element) |
 | [0540-single-element-in-a-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
+| [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
 <!---LeetCode Topics End-->
