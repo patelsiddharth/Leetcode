@@ -4,13 +4,10 @@
  */
 var lastStoneWeight = function(stones) {
     const findMax = () => {
-        if (!stones || stones.length < 2) return [-1, -1];
-
         let max1 = 0, max2 = 1;
         if (stones[max2] > stones[max1]) {
             [max1, max2] = [max2, max1];
         }
-
         for(let i = 2; i < stones.length; i++) {
             if (stones[i] > stones[max1]) {
                 max2 = max1;
@@ -22,26 +19,18 @@ var lastStoneWeight = function(stones) {
         return [max1, max2];
     }
     while(stones.length > 0) {
-        let len = stones.length;
-        if (len === 1) {
+        if (stones.length === 1) {
             return stones[0];
-        } else if (len === 0) {
-            return 0;
         }
         
         let [max1, max2] = findMax();
         if(stones[max1] === stones[max2]) {
             stones.splice(max1, 1);
-            if(max1 > max2) {
-                stones.splice(max2, 1);
-            } else {
-                stones.splice(max2 - 1, 1);
-            }
-            
+            max2 = max1 > max2 ? max2 : max2 - 1;
         } else {
             stones[max1] = stones[max1] - stones[max2];
-            stones.splice(max2, 1);
         }
+        stones.splice(max2, 1);
     }
     return 0;
 };
