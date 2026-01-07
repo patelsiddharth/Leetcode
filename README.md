@@ -30,6 +30,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0125-valid-palindrome](https://github.com/patelsiddharth/Leetcode/tree/master/0125-valid-palindrome) |
 | [0189-rotate-array](https://github.com/patelsiddharth/Leetcode/tree/master/0189-rotate-array) |
 | [0283-move-zeroes](https://github.com/patelsiddharth/Leetcode/tree/master/0283-move-zeroes) |
 ## Math
@@ -85,4 +86,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/patelsiddharth/Leetcode/tree/master/0232-implement-queue-using-stacks) |
+## String
+|  |
+| ------- |
+| [0125-valid-palindrome](https://github.com/patelsiddharth/Leetcode/tree/master/0125-valid-palindrome) |
 <!---LeetCode Topics End-->
