@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0069-sqrtx](https://github.com/patelsiddharth/Leetcode/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/patelsiddharth/Leetcode/tree/master/0189-rotate-array) |
+| [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
 ## Binary Search
 |  |
 | ------- |
@@ -90,4 +91,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0125-valid-palindrome](https://github.com/patelsiddharth/Leetcode/tree/master/0125-valid-palindrome) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
+## Recursion
+|  |
+| ------- |
+| [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
+## Memoization
+|  |
+| ------- |
+| [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
 <!---LeetCode Topics End-->
