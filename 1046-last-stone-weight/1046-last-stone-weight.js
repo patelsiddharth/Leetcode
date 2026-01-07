@@ -30,10 +30,6 @@ var lastStoneWeight = function(stones) {
         }
         
         let [max1, max2] = findMax();
-        console.log(stones)
-        console.log(max1, stones[max1])
-        console.log(max2, stones[max2])
-        console.log(stones[max1] === stones[max2])
         if(stones[max1] === stones[max2]) {
             stones.splice(max1, 1);
             if(max1 > max2) {
@@ -46,7 +42,6 @@ var lastStoneWeight = function(stones) {
             stones[max1] = stones[max1] - stones[max2];
             stones.splice(max2, 1);
         }
-            console.log(stones)
     }
     return 0;
 };
