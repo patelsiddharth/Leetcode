@@ -16,21 +16,31 @@ MyQueue.prototype.push = function(x) {
  * @return {number}
  */
 MyQueue.prototype.pop = function() {
-    return this.stack1.shift();
+    if(this.stack2.length === 0) {
+        while(this.stack1.length > 0) {
+            this.stack2.push(this.stack1.pop())
+        }
+    }
+    return this.stack2.pop();
 };
 
 /**
  * @return {number}
  */
 MyQueue.prototype.peek = function() {
-    return this.stack1[0];
+    if(this.stack2.length === 0) {
+        while(this.stack1.length > 0) {
+            this.stack2.push(this.stack1.pop())
+        }
+    }
+    return this.stack2[this.stack2.length - 1];
 };
 
 /**
  * @return {boolean}
  */
 MyQueue.prototype.empty = function() {
-    return this.stack1.length === 0;
+    return this.stack1.length === 0 && this.stack2.length === 0;
 };
 
 /** 
