@@ -19,7 +19,7 @@ var combinationSum = function(candidates, target) {
 
         findSum(i, sum + candidates[i], [...arr, candidates[i]]);
         findSum(i+1, sum, arr);
-        findSum(i+1, sum + candidates[i], [...arr, candidates[i]]);
+        // findSum(i+1, sum + candidates[i], [...arr, candidates[i]]);
     }
     findSum(0, 0, []);
     return Array.from(map.values());
