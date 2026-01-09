@@ -4,24 +4,23 @@
  * @return {number[][]}
  */
 var combinationSum = function(candidates, target) {
-    let res = [];
-    function cs(arr, idx, sum) {
-        if(target === sum)
-        {
-            res.push(arr);
+    const map = new Map();
+    const findSum = (i, sum , arr) => {
+        if (sum > target) return;
+
+        if (i === candidates.length) {
+            if (sum === target) {
+                if (!map.has(arr.toString())) {
+                    map.set(arr.toString(), arr);
+                }
+            }
             return;
         }
-        
-        if(idx === candidates.length || sum > target)
-        {
-            return;
-        }
-        
-        cs([...arr, candidates[idx]], idx, sum + candidates[idx]);
-        
-        cs(arr, idx + 1, sum);
+
+        findSum(i, sum + candidates[i], [...arr, candidates[i]]);
+        findSum(i+1, sum, arr);
+        findSum(i+1, sum + candidates[i], [...arr, candidates[i]]);
     }
-    
-    cs([], 0, 0)
-    return res;
+    findSum(0, 0, []);
+    return Array.from(map.values());
 };
