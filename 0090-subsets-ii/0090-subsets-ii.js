@@ -4,21 +4,14 @@
  */
 var subsetsWithDup = function(nums) {
     let res = [];
-    nums.sort((a,b) => a-b)
-    function ss(arr, idx) {
-        res.push([...arr]);
-        
-        for(let i = idx; i < nums.length; i++)
-        {
-            if(i > idx && nums[i] === nums[i-1])
-            {
-                continue;
-            }
-            
-            ss([...arr, nums[i]], i + 1);
+    nums.sort((a,b) => a-b);
+    const findSubset = (idx, arr) => {
+        res.push(arr);
+        for(let i = idx; i < nums.length; i++) {
+            if (i !== idx && nums[i-1] === nums[i]) continue;
+            findSubset(i+1, [...arr, nums[i]]);
         }
     }
-    
-    ss([], 0);
+    findSubset(0, []);
     return res;
 };
