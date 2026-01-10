@@ -4,25 +4,19 @@
  */
 var permute = function(nums) {
     let res = [];
-    function perm(arr, mapping, idx) {
-        if(arr.length === nums.length)
-        {
-            res.push(arr)
+    const findPer = (arr, map) => {
+        if(arr.length === nums.length) {
+            res.push(arr);
             return;
         }
-        
-        for(let i = 0; i < nums.length; i++) 
-        {
-            if(mapping[i] === 0)
-            {
-                mapping[i] = 1;
-                perm([...arr, nums[i]], mapping, i + 1);
-                mapping[i] = 0; 
+        for(let i = 0; i < nums.length; i++) {
+            if(!map.has(nums[i])) {
+                map.set(nums[i], 1);
+                findPer([...arr, nums[i]], map);
+                map.delete(nums[i]);
             }
         }
     }
-    
-    perm([], new Array(nums.length).fill(0), 0)
-    
+    findPer([], new Map());
     return res;
 };
