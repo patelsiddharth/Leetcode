@@ -3,58 +3,48 @@
  * @return {string[][]}
  */
 var solveNQueens = function(n) {
-    let res = [];
-    function isSafe(row, col, arr) {
-        let nRow = row, nCol = col;
-        while(row >= 0 && col >= 0)
-        {
-            if(arr[row][col] === 'Q')
-                return false;
-            row--;
-            col--;
-        }
-        
-        row = nRow;
-        col = nCol;
-        while(col >= 0)
-        {
-            if(arr[row][col] === 'Q')
-                return false;
-            
-            col--;
-        }
-        
-        row = nRow;
-        col = nCol;
-        while(row < n && col >= 0)
-        {
-            if(arr[row][col] === 'Q')
-                return false;
-            row++;
-            col--;
-        }
-        
-        return true;
-    }
-    function place(col, arr) {
-        if(col === n)
-        {
+    let res = []
+    const solve = (col, arr) => {
+        if (col === n) {
             let str = arr.map(item => item.join(''))
             res.push(str);
             return;
         }
         
-        for(let row = 0; row < n; row++)
-        {
-            if(isSafe(row, col, arr))
-            {
+        const isSafe = (row, col, arr) => {
+            let i = row, j = col;
+            while (j >= 0) {
+                if (arr[i][j] === 'Q') return false;
+                j--;
+            }
+
+            j = col;
+            while (i >= 0 && j >= 0) {
+                if (arr[i][j] === 'Q') return false;
+                i--;
+                j--;
+            }
+
+            i = row;
+            j = col;
+            while (i < n && j >= 0) {
+                if (arr[i][j] === 'Q') return false;
+                i++;
+                j--;
+            }
+
+            return true;
+        }
+
+        for(let row = 0; row < n; row++) {
+            if (isSafe(row, col, arr)) {
                 arr[row][col] = 'Q';
-                place(col + 1, arr);
+                solve(col + 1, arr);
                 arr[row][col] = '.';
             }
         }
+        
     }
-    
-    place(0, Array.from({ length: n }, () => Array(n).fill('.')));
+    solve(0, Array.from({ length: n }, () => Array(n).fill('.')));
     return res;
 };
