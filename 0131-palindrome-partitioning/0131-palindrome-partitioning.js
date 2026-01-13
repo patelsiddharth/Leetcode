@@ -3,36 +3,28 @@
  * @return {string[][]}
  */
 var partition = function(s) {
-    let res = [];
-    
-    function isPalindrome(start, end) {
-        while(start < end)
-        {
-            if(s[start] !== s[end])
-            {
-                return false;
-            }
-            start++;
-            end--;
+    const res = [];
+    const checkPalindrome = (i, j) => {
+        while(i < j) {
+            if(s.charAt(i) !== s.charAt(j)) return false;
+            i++;
+            j--;
         }
         return true;
     }
-    
-    function part(idx, arr) {
-        if(idx === s.length)
-        {
-            res.push(arr)
+
+    const performPartition = (idx, arr) => {
+        if (idx === s.length) {
+            res.push(arr);
             return;
         }
-        
-        for(let i = idx; i < s.length; i++)
-        {
-            if(isPalindrome(idx, i))
-            {
-                part(i + 1, [...arr, s.substring(idx, i + 1)]);
+        for(let i = idx; i < s.length; i++) {
+            if (checkPalindrome(idx, i)) {
+                performPartition(i + 1, [...arr, s.substring(idx, i + 1)]);
             }
         }
     }
-    part(0, []);
+
+    performPartition(0, []);
     return res;
 };
