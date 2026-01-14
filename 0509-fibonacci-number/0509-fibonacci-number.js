@@ -3,11 +3,12 @@
  * @return {number}
  */
 var fib = function(n) {
-    const dp = Array.from({length : n+1}).map(() => -1);
-    dp[0] = 0;
-    dp[1] = 1;
+    if (n <= 1) return n;
+    let prev2 = 0, prev1 = 1;
     for(let i = 2; i <= n; i++) {
-        dp[i] = dp[i-1] + dp[i-2];
+        const temp = prev1;
+        prev1 = prev1 + prev2;
+        prev2 = temp;
     }
-    return dp[n];
+    return prev1;
 };
