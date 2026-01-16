@@ -1,37 +1,30 @@
 /**
- * @param {number[]} arr
+ * @param {number[]} nums
  * @return {number}
  */
-var rob = function(arr) {
-    if(arr.length === 1)
-        return arr[0]
+var rob = function(nums) {
+    if (nums.length === 1) return nums[0];
     
-    let obj = {}, diff = 2;
-    
-    function robH(idx) {
-        if (idx === arr.length - diff)
-        {
-            return arr[idx]
+    const robHouse = (idx, takeZero) => {
+        if (takeZero) {
+            if (idx === 0) return nums[0];
+            if (idx < 0) return 0;
+        } else {
+            if (idx === 1) return nums[1];
+            if (idx < 1) return 0;
         }
-
-        if (idx > arr.length - diff)
-        {
-            return 0;
-        }
-
-         if(Object.hasOwn(obj, idx))
-        {
-            return obj[idx]
-        }
-
-        let pick = arr[idx] + robH(idx + 2)
-        let notPick = robH(idx + 1)
-
-        return obj[idx] = Math.max(pick, notPick);
+        if (dp[idx] !== -1) return dp[idx];
+        const pick = nums[idx] + robHouse(idx - 2, takeZero);
+        const pickNot = 0 + robHouse(idx - 1, takeZero);
+        dp[idx] = Math.max(pick, pickNot);
+        return dp[idx];
     }
-    let r1 = robH(0)
-    diff = 1;
-    obj = {};
-    let r2 = robH(1)
-    return Math.max(r1, r2)
+    
+    let dp = Array.from({ length : nums.length + 1}).fill(-1);
+    const takeZero = robHouse(nums.length - 2, true);
+
+    dp = Array.from({ length : nums.length + 1}).fill(-1);
+    const notTakeZero = robHouse(nums.length - 1, false);
+
+    return Math.max(takeZero, notTakeZero);
 };
