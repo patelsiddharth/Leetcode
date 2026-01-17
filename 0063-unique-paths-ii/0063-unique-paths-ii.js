@@ -3,42 +3,15 @@
  * @return {number}
  */
 var uniquePathsWithObstacles = function(obstacleGrid) {
-    let m = obstacleGrid.length, n = obstacleGrid[0].length;
-    
-    if(obstacleGrid[m-1][n-1] === 1 || obstacleGrid[0][0] === 1)
-        return 0;
-    
     let map = new Map();
-    function move(row, col) {
-        if(row === m-1 && col === n-1)
-        {
-            return 1;
+    const path = (i, j) => {
+        if (i === obstacleGrid.length - 1 && j === obstacleGrid[0].length - 1 && obstacleGrid[i][j] !== 1) return 1;
+        if (i >= obstacleGrid.length || j >= obstacleGrid[0].length || obstacleGrid[i][j] === 1) return 0;
+        const key = `${i}-${j}`;
+        if (!map.has(key)) {
+            map.set(key, path(i, j + 1) + path(i + 1, j));
         }
-        
-        if(row > m-1 || col > n-1)
-        {
-            return 0;
-        }
-        
-        if(map.has(row+'-'+col))
-        {
-            return map.get(row+'-'+col)
-        }
-        let right = 0;
-        if(col + 1 < n && obstacleGrid[row][col+1] === 0)
-        {
-            right = move(row, col+1);
-        }
-        
-        let down = 0;
-        if(row + 1 < m && obstacleGrid[row+1][col] === 0)
-        {
-            down = move(row+1, col);
-        }
-        
-        map.set(row+'-'+col, right + down)
-        return right + down;
+        return map.get(key);
     }
-    
-    return move(0,0)
+    return path(0, 0);
 };
