@@ -5,7 +5,6 @@
 var minimumTotal = function(triangle) {
     const map = new Map();
     const path = (row, col) => {
-        if (row >= triangle.length || col >= triangle[triangle.length - 1].length) return Number.POSITIVE_INFINITY;
         if (row === triangle.length - 1) return triangle[row][col];
         const key = `${row}-${col}`;
         if (!map.has(key)) {
