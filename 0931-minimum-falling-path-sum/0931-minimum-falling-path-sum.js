@@ -3,11 +3,7 @@
  * @return {number}
  */
 var minFallingPathSum = function(matrix) {
-    let prev = Array.from({ length: matrix[0].length }).fill(0)
-    for(let col = 0; col < matrix[0].length; col++) {
-        prev[col] = matrix[0][col];
-    }
-
+    let prev = matrix[0]
     for(let i = 1; i < matrix.length; i++) {
         let curr = Array.from({ length : matrix[0].length }).fill(Number.POSITIVE_INFINITY);
         for(let j = 0; j < matrix[0].length; j++) {
@@ -18,6 +14,6 @@ var minFallingPathSum = function(matrix) {
         }
         prev = curr
     }
-    
+
     return Math.min(...prev); 
 };
