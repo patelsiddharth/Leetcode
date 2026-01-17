@@ -3,14 +3,14 @@
  * @return {number}
  */
 var minimumTotal = function(triangle) {
-    const map = new Map();
-    const path = (row, col) => {
-        if (row === triangle.length - 1) return triangle[row][col];
-        const key = `${row}-${col}`;
-        if (!map.has(key)) {
-            map.set(key, triangle[row][col] + Math.min(path(row+1, col), path(row+1, col+1)));
+    let n = triangle.length;
+    let prev = triangle[n - 1];
+    for(let i = n - 2; i >= 0; i--) {
+        let curr = Array.from({ length : n }).fill(0);
+        for(let j = i; j >= 0; j--) {
+            curr[j] = triangle[i][j] + Math.min(prev[j], prev[j+1]);
         }
-        return map.get(key);
+        prev = curr;
     }
-    return path(0, 0);
+    return prev[0];
 };
