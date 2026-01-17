@@ -3,30 +3,15 @@
  * @return {number}
  */
 var minPathSum = function(grid) {
-    let map = new Map(),
-        m = grid.length, 
-        n = grid[0].length;
-    
-    function move(row, col) {
-        if(row === m - 1 && col === n - 1)
-        {
-            return grid[row][col];
+    const map = new Map(), m = grid.length - 1, n = grid[0].length - 1;
+    const path = (i, j) => {
+        if (i === 0 && j === 0) return grid[0][0];
+        if (i < 0 || j < 0) return Number.POSITIVE_INFINITY;
+        const key = `${i}-${j}`;
+        if (!map.has(key)) {
+            map.set(key, grid[i][j] + Math.min(path(i, j - 1), path(i - 1, j)));
         }
-        
-        if(row > m - 1 || col > n - 1)
-        {
-            return Number.POSITIVE_INFINITY;
-        }
-        
-        if(map.has(row + '+' + col))
-        {
-            return map.get(row + '+' + col);
-        }
-        
-        let tempMin = grid[row][col] + Math.min(move(row + 1, col), move(row, col + 1));
-        map.set(row + '+' + col, tempMin);
-        return tempMin;
+        return map.get(key);
     }
-    
-    return move(0, 0);
+    return path(m, n)
 };
