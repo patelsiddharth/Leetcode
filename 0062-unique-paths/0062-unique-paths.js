@@ -4,28 +4,15 @@
  * @return {number}
  */
 var uniquePaths = function(m, n) {
-    let map = new Map();
-    function move(row, col) {
-        if(row >= m || col >= n)
-        {
-            return 0;
-        }
-        
-        if(row === m - 1 && col === n - 1)
-        {
-            return 1;
-        }
-        
-        let key = `${row}-${col}`
-        if(map.has(key))
-        {
-            return map.get(key);
-        }
-        
-        let res = move(row, col + 1) + move(row + 1, col);
-        map.set(key, res);
-        return res;
+    let dp = new Map();
+    const path = (i, j) => {
+        if (i >= m || j >= n) return 0;
+        if (i === m - 1 && j === n - 1) return 1;
+
+        const key = `${i}-${j}`;
+        if (dp.has(key)) return dp.get(key);
+        dp.set(key, path(i+1, j) + path(i, j+1));
+        return dp.get(key);
     }
-    
-    return move(0, 0);
+    return path(0,0);
 };
