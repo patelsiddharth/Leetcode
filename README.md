@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0046-permutations](https://github.com/patelsiddharth/Leetcode/tree/master/0046-permutations) |
 | [0051-n-queens](https://github.com/patelsiddharth/Leetcode/tree/master/0051-n-queens) |
 | [0063-unique-paths-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0063-unique-paths-ii) |
+| [0064-minimum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0064-minimum-path-sum) |
 | [0078-subsets](https://github.com/patelsiddharth/Leetcode/tree/master/0078-subsets) |
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0090-subsets-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0090-subsets-ii) |
@@ -108,6 +109,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0062-unique-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0063-unique-paths-ii) |
+| [0064-minimum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0064-minimum-path-sum) |
 | [0070-climbing-stairs](https://github.com/patelsiddharth/Leetcode/tree/master/0070-climbing-stairs) |
 | [0131-palindrome-partitioning](https://github.com/patelsiddharth/Leetcode/tree/master/0131-palindrome-partitioning) |
 | [0213-house-robber-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0213-house-robber-ii) |
@@ -146,6 +148,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0037-sudoku-solver](https://github.com/patelsiddharth/Leetcode/tree/master/0037-sudoku-solver) |
 | [0063-unique-paths-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0063-unique-paths-ii) |
+| [0064-minimum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0064-minimum-path-sum) |
 ## Combinatorics
 |  |
 | ------- |
