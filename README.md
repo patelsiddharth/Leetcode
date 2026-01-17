@@ -31,6 +31,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0622-design-circular-queue](https://github.com/patelsiddharth/Leetcode/tree/master/0622-design-circular-queue) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
+| [0931-minimum-falling-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0931-minimum-falling-path-sum) |
 | [1046-last-stone-weight](https://github.com/patelsiddharth/Leetcode/tree/master/1046-last-stone-weight) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/patelsiddharth/Leetcode/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/patelsiddharth/Leetcode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
@@ -116,6 +117,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0131-palindrome-partitioning](https://github.com/patelsiddharth/Leetcode/tree/master/0131-palindrome-partitioning) |
 | [0213-house-robber-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0213-house-robber-ii) |
 | [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
+| [0931-minimum-falling-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0931-minimum-falling-path-sum) |
 ## Recursion
 |  |
 | ------- |
@@ -151,6 +153,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0037-sudoku-solver](https://github.com/patelsiddharth/Leetcode/tree/master/0037-sudoku-solver) |
 | [0063-unique-paths-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0064-minimum-path-sum) |
+| [0931-minimum-falling-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0931-minimum-falling-path-sum) |
 ## Combinatorics
 |  |
 | ------- |
