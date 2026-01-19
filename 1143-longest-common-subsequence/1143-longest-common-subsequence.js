@@ -4,20 +4,20 @@
  * @return {number}
  */
 var longestCommonSubsequence = function(s1, s2) {
-    const n = s1.length, m = s2.length;
-    const dp = Array(n + 1).fill().map(() => Array(m + 1).fill(0));
+    const map = Array(s1.length + 1).fill().map(() => Array(s2.length + 1).fill(-1));
+    const lcs1 = (idx1, idx2) => {
+        if (idx1 < 0 || idx2 < 0) return 0;
 
-    for(let j = 0; j <= m; j++) dp[0][j] = 0
-    for(let i = 0; i <= n; i++) dp[i][0] = 0
+        if(map[idx1][idx2] !== -1) return map[idx1][idx2];
 
-    for(let i = 1; i <= n; i++) {
-        for(let j = 1; j <= m; j++) {
-            if(s1[i-1] === s2[j-1]) {
-                dp[i][j] = 1 + dp[i - 1][j - 1];
-            } else {
-                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
-            }
-        }    
+        let res = 0;
+        if(s1[idx1] === s2[idx2]) {
+            res = 1 + lcs1(idx1 - 1, idx2 - 1);
+        } else {
+            res = Math.max(lcs1(idx1 - 1, idx2), lcs1(idx1, idx2 - 1));
+        }
+        map[idx1][idx2] = res;
+        return res;
     }
-    return dp[n][m];
+    return lcs1(s1.length - 1, s2.length - 1);
 };
