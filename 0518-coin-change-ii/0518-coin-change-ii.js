@@ -14,8 +14,12 @@ var change = function(amount, coins) {
 
         const key = `${idx}-${sum}`;
         if(!map.has(key)) {
-            const res = select(idx + 1, sum) + select(idx, sum + coins[idx]);
-            map.set(key, res);
+            const notTake = select(idx + 1, sum);
+            let takeCoin = 0;
+            if (coins[idx] <= amount - sum) {
+                takeCoin = select(idx, sum + coins[idx]);
+            }
+            map.set(key, notTake + takeCoin);
         }
         return map.get(key);
     }
