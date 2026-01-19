@@ -6,8 +6,6 @@
 var change = function(amount, coins) {
     const map = new Map();
     const select = (idx, sum) => {
-        if (sum > amount) return 0;
-
         if (idx === coins.length) {
             return sum === amount ? 1 : 0
         }
