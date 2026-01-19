@@ -111,6 +111,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0125-valid-palindrome](https://github.com/patelsiddharth/Leetcode/tree/master/0125-valid-palindrome) |
 | [0131-palindrome-partitioning](https://github.com/patelsiddharth/Leetcode/tree/master/0131-palindrome-partitioning) |
+| [0516-longest-palindromic-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0516-longest-palindromic-subsequence) |
 | [1143-longest-common-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/1143-longest-common-subsequence) |
 ## Dynamic Programming
 |  |
@@ -126,6 +127,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0416-partition-equal-subset-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0494-target-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0494-target-sum) |
 | [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
+| [0516-longest-palindromic-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0518-coin-change-ii) |
 | [0931-minimum-falling-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0931-minimum-falling-path-sum) |
 | [1143-longest-common-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/1143-longest-common-subsequence) |
