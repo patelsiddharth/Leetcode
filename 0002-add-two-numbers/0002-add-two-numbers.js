@@ -11,34 +11,23 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function(l1, l2) {
-    let t1 = l1, t2 = l2, carry = 0;
-    let head = new ListNode(-1);
-    let temp = head;
-    while(t1 !== null || t2 !== null)
-    {
-        let sum = carry;
-        if(t1)
-        {
-            sum += t1.val
-        }
-        if(t2)
-        {
-            sum += t2.val;
-        }
-    
+    let carry = 0, curr1 = l1, curr2 = l2;
+    let head = new ListNode();
+    let curr = head;
+    while(curr1 !== null || curr2 !== null) {
+        const val1 = curr1 ? curr1.val : 0;
+        const val2 = curr2 ? curr2.val : 0;
+        let sum = val1 + val2 + carry;
         carry = Math.floor(sum / 10);
         
-        temp.next = new ListNode(sum % 10);
-        temp = temp.next;
-            
-        t1 && (t1 = t1.next);
-        t2 && (t2 = t2.next);
+        let node = new ListNode(sum % 10);
+        curr.next = node;
+        curr = node;
+        curr1 && (curr1 = curr1.next);
+        curr2 && (curr2 = curr2.next);
     }
-    
-    if(carry !== 0)
-    {
-        temp.next = new ListNode(carry);
+    if (carry > 0) {
+        curr.next = new ListNode(carry);
     }
-    
     return head.next;
 };
