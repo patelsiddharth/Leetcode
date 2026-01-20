@@ -99,6 +99,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0002-add-two-numbers](https://github.com/patelsiddharth/Leetcode/tree/master/0002-add-two-numbers) |
 | [0019-remove-nth-node-from-end-of-list](https://github.com/patelsiddharth/Leetcode/tree/master/0019-remove-nth-node-from-end-of-list) |
+| [0328-odd-even-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/0328-odd-even-linked-list) |
 | [0622-design-circular-queue](https://github.com/patelsiddharth/Leetcode/tree/master/0622-design-circular-queue) |
 ## Design
 |  |
