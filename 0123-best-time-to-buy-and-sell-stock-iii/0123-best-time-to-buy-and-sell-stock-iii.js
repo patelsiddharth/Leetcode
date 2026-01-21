@@ -6,12 +6,9 @@ var maxProfit = function(prices) {
     const dp = Array(prices.length).fill().map(() => Array(2).fill().map(() => Array(3).fill(-1)));
 
     const calProfit = (day, buy, cap) => {
-        if (cap === 0) return 0;
-        if (day === prices.length) return 0;
-
-        const key = `${day}-${buy}-${cap}`;
+        if (cap === 0 || day === prices.length) return 0;
+        
         if (dp[day][buy][cap] === -1) {
-            let profit = 0
             if (buy) {
                 const buyStock = -prices[day] + calProfit(day + 1, 0, cap);
                 const notBuyStock = 0 + calProfit(day + 1, 1, cap);
