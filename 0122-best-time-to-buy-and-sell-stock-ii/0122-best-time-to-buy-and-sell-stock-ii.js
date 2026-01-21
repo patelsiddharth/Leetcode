@@ -3,34 +3,25 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-    let obj = new Map();
-    function transact(idx, buy) {
-        if(idx === prices.length)
-        {
-           return 0;
+    const n = prices.length;
+    const dp = Array(n + 1).fill().map(() => Array(2).fill(0));
+    dp[n][0] = 0;
+    dp[n][1] = 0;
+
+    for(let i = n - 1; i >= 0; i--) {
+        for(let buy = 0; buy <= 1; buy++) {
+            let profit = 0;
+            if (buy) {
+                const buyStock = -prices[i] + dp[i + 1][0];
+                const notBuyStock = 0 + dp[i + 1][1];
+                profit = Math.max(buyStock, notBuyStock);
+            } else {
+                const sellStock = prices[i] + dp[i + 1][1];
+                const notSellStock = 0 + dp[i + 1][0];
+                profit = Math.max(sellStock, notSellStock);
+            }
+            dp[i][buy] = profit;
         }
-        
-        if(obj.has(idx + 1 + '-' + buy))
-        {
-            return obj.get(idx + 1 + '-' + buy);
-        }
-        
-        let profit = 0;
-        if(buy)
-        {
-            let buyStock = -prices[idx] + transact(idx + 1, 0);
-            let notBuyStock = 0 + transact(idx + 1, 1);
-            profit = Math.max(buyStock, notBuyStock)
-        }
-        else
-        {
-            let sellStock = prices[idx] + transact(idx + 1, 1);
-            let notSellStock = 0 + transact(idx + 1, 0);
-            profit = Math.max(sellStock, notSellStock);
-        }
-        
-        obj.set(idx + 1 + '-' + buy, profit);
-        return profit;
     }
-    return transact(0, 1);
+    return dp[0][1];
 };
