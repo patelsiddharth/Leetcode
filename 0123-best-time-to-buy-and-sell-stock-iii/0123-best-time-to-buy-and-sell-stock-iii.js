@@ -3,28 +3,28 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-    const map = new Map();
+    const dp = Array(prices.length).fill().map(() => Array(2).fill().map(() => Array(3).fill(-1)));
+
     const calProfit = (day, buy, cap) => {
         if (cap === 0) return 0;
         if (day === prices.length) return 0;
 
         const key = `${day}-${buy}-${cap}`;
-        if (!map.has(key)) {
+        if (dp[day][buy][cap] === -1) {
             let profit = 0
             if (buy) {
                 const buyStock = -prices[day] + calProfit(day + 1, 0, cap);
                 const notBuyStock = 0 + calProfit(day + 1, 1, cap);
-                profit = Math.max(buyStock, notBuyStock)
+                dp[day][buy][cap] = Math.max(buyStock, notBuyStock)
             }
             else {
                 const sellStock = prices[day] + calProfit(day + 1, 1, cap - 1);
                 const notSellStock = 0 + calProfit(day + 1, 0, cap);
-                profit = Math.max(sellStock, notSellStock)
+                dp[day][buy][cap] = Math.max(sellStock, notSellStock)
             }
-            map.set(key, profit);
         }
 
-        return map.get(key);
+        return dp[day][buy][cap];
     }
     return calProfit(0, 1, 2);
 };
