@@ -5,34 +5,34 @@
  */
 var isMatch = function(s, p) {
     const n = s.length, m = p.length;
-    const dp = Array(n).fill().map(() => Array(m).fill(-1))
-    const match = (i, j) => {
-        // Both strings are exhausted
-        if (i < 0 && j < 0) return true;
-
-        // Pattern strings is exhausted
-        if (i >= 0 && j < 0) return false;
-
-        // Input strings is exhausted but pattern string is not
-        // pattern string can match with input string only when all the character are '*'
-        if (i < 0 && j >= 0) {
-            for(let k = 0; k <= j; k++) {
-                if (p[k] !== '*') return false;
-            }
-            return true;
-        }
-
-        if (dp[i][j] === -1) {
-            if (p[j] !== '*' && p[j] !== '?') {
-                if (s[i] !== p[j]) return false;
-                dp[i][j] = match(i - 1, j - 1);
-            } else if (p[j] === '*') {
-                dp[i][j] = match(i - 1, j) + match(i, j - 1);
-            } else if (p[j] === '?') {
-                dp[i][j] = match(i - 1, j - 1);
+    const dp = Array(n + 1).fill().map(() => Array(m + 1).fill(0))
+    dp[0][0] = true;
+    for(let i = 1; i <= n; i++) dp[i][0] = false;
+    for(let j = 1; j <= m; j++) {
+        let flag = true
+        for(let k = 1; k <= j; k++) {
+            if (p[k-1] !== '*') {
+                flag = false;
+                break;
             }
         }
-        return dp[i][j];
+        dp[0][j] = flag
     }
-    return match(n - 1, m - 1);
+
+    for(let i = 1; i <= n; i++) {
+        for(let j = 1; j <= m; j++) {
+            if (p[j - 1] !== '*' && p[j - 1] !== '?') {
+                if (s[i - 1] !== p[j - 1]) {
+                    dp[i][j] = false;
+                } else {
+                    dp[i][j] = dp[i - 1][j - 1];
+                }
+            } else if (p[j - 1] === '*') {
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+            } else if (p[j - 1] === '?') {
+                dp[i][j] = dp[i - 1][j - 1];
+            }
+        }
+    }
+    return dp[n][m];
 };
