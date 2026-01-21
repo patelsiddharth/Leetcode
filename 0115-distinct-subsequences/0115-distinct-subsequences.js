@@ -5,19 +5,18 @@
  */
 var numDistinct = function(s, t) {
     const n = s.length, m = t.length;
-    const dp = Array(n).fill().map(() => Array(m).fill(-1))
-    const match = (i, j) => {
-        if (j < 0) return 1;
-        if (i < 0) return 0;
+    const dp = Array(n+1).fill().map(() => Array(m+1).fill(0))
 
-        if (dp[i][j] === -1) {
-            if (s[i] === t[j]) {
-                dp[i][j] = match(i - 1, j - 1) + match(i - 1, j);
+    for(let i = 0; i <= n; i++) dp[i][0] = 1;
+
+    for (let i = 1; i <= n; i++) {
+        for(let j = 1; j <= m; j++) {
+            if (s[i-1] === t[j-1]) {
+                dp[i][j] = dp[i - 1][j - 1] + dp[i - 1][j];
             } else {
-                dp[i][j] = match(i - 1, j);
+                dp[i][j] = dp[i - 1][j];
             }
         }
-        return dp[i][j];
     }
-    return match (n - 1, m - 1);
+    return dp[n][m];
 };
