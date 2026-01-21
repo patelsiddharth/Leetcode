@@ -7,8 +7,14 @@ var isMatch = function(s, p) {
     const n = s.length, m = p.length;
     const dp = Array(n).fill().map(() => Array(m).fill(-1))
     const match = (i, j) => {
+        // Both strings are exhausted
         if (i < 0 && j < 0) return true;
+
+        // Pattern strings is exhausted
         if (i >= 0 && j < 0) return false;
+
+        // Input strings is exhausted but pattern string is not
+        // pattern string can match with input string only when all the character are '*'
         if (i < 0 && j >= 0) {
             for(let k = 0; k <= j; k++) {
                 if (p[k] !== '*') return false;
