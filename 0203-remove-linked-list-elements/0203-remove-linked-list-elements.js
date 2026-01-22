@@ -19,10 +19,9 @@ var removeElements = function(head, val) {
             } else {
                 head = temp.next;
             }
-            temp = temp.next;
-            continue;
+        } else {
+            prev = temp;
         }
-        prev = temp;
         temp = temp.next;
     }
     return head;
