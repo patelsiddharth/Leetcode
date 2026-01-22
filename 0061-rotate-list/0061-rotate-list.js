@@ -30,6 +30,7 @@ var rotateRight = function(head, k) {
         if (count === len - k) {
             head = curr.next;
             curr.next = null;
+            break;
         }
         curr = curr.next;
     }
