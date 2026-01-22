@@ -47,9 +47,10 @@ var reverseKGroup = function(head, k) {
 
         if (temp === head) {
             head = newHead;
+        } else {
+            prevNode.next = kthNode;
         }
         temp.next = nextNode;
-        prevNode && (prevNode.next = kthNode);
         prevNode = temp;
         temp = temp.next;
     }
