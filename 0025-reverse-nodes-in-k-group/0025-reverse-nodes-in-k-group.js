@@ -22,24 +22,21 @@ const reverse = (head) => {
 }
 
 const getKthNode = (head, k) => {
-    let temp = head, c = 0;
+    let temp = head;
     while(temp != null) {
-        c++;
-        if(c === k) {
-            break;
-        }
+        if(--k === 0) break;
         temp = temp.next;
     }
-    return temp !== null ? temp : null;
+    return temp;
 }
 
 var reverseKGroup = function(head, k) {
     let temp = head, prevNode = null;
     while(temp !== null) {
         let kthNode = getKthNode(temp, k);
-        if (kthNode === null) {
-            break;
-        }
+        
+        if (kthNode === null) break;
+        
         let nextNode = kthNode.next
         kthNode.next = null;
 
