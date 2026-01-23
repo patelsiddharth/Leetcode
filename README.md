@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0300-longest-increasing-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/patelsiddharth/Leetcode/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0322-coin-change](https://github.com/patelsiddharth/Leetcode/tree/master/0322-coin-change) |
+| [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0368-largest-divisible-subset](https://github.com/patelsiddharth/Leetcode/tree/master/0368-largest-divisible-subset) |
 | [0416-partition-equal-subset-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0416-partition-equal-subset-sum) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
@@ -67,6 +68,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0189-rotate-array](https://github.com/patelsiddharth/Leetcode/tree/master/0189-rotate-array) |
 | [0234-palindrome-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0283-move-zeroes](https://github.com/patelsiddharth/Leetcode/tree/master/0283-move-zeroes) |
+| [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0876-middle-of-the-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/0876-middle-of-the-linked-list) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
@@ -92,6 +94,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0154-find-minimum-in-rotated-sorted-array-ii) |
 | [0162-find-peak-element](https://github.com/patelsiddharth/Leetcode/tree/master/0162-find-peak-element) |
 | [0300-longest-increasing-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0300-longest-increasing-subsequence) |
+| [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0540-single-element-in-a-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
@@ -110,6 +113,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 |  |
 | ------- |
+| [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0368-largest-divisible-subset](https://github.com/patelsiddharth/Leetcode/tree/master/0368-largest-divisible-subset) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [1921-eliminate-maximum-number-of-monsters](https://github.com/patelsiddharth/Leetcode/tree/master/1921-eliminate-maximum-number-of-monsters) |
@@ -240,6 +244,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0141-linked-list-cycle](https://github.com/patelsiddharth/Leetcode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/patelsiddharth/Leetcode/tree/master/0160-intersection-of-two-linked-lists) |
+| [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 ## Matrix
