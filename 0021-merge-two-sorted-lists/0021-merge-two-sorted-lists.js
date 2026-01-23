@@ -14,11 +14,12 @@ var mergeTwoLists = function(list1, list2) {
     let temp1 = list1, temp2 = list2, newHead = new ListNode(0);
     let prev = newHead;
 
-    const appendNode = (curr, val) => {
-        const newNode = new ListNode(val);
-        prev.next = newNode;
-        prev = newNode;
-        return curr.next;
+    const appendNode = (curr) => {
+        let nextNode = curr.next;
+        prev.next = curr;
+        prev = curr;
+        curr.next = null
+        return nextNode;
     }
 
     while(temp1 !== null || temp2 !== null) {
@@ -26,12 +27,12 @@ var mergeTwoLists = function(list1, list2) {
               val2 = temp2 !== null ? temp2.val : 101;
 
         if (val1 === val2) {
-            temp1 = appendNode(temp1, val1);
-            temp2 = appendNode(temp2, val2);
+            temp1 = appendNode(temp1);
+            temp2 = appendNode(temp2);
         } else if(val1 > val2) {
-            temp2 = appendNode(temp2, val2);
+            temp2 = appendNode(temp2);
         } else {
-            temp1 = appendNode(temp1, val1);
+            temp1 = appendNode(temp1);
         }
     }
     
