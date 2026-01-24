@@ -3,15 +3,23 @@
  * @return {number}
  */
 var majorityElement = function(nums) {
-    let obj = {}, size = Math.floor(nums.length / 2);
+    let cnt = 0, el;
     nums.forEach(num => {
-        obj[num] = obj[num] ? obj[num] + 1 : 1
+        if (cnt === 0) {
+            cnt = 1;
+            el = num;
+        } else if (el === num) {
+            cnt++;
+        } else {
+            cnt--;
+        }
     });
     
-    for(let i in obj) {
-        if (obj[i] > size) {
-            return parseInt(i);
-        }
-    }
-    return 0;
+    let cnt1 = 0;
+    nums.forEach(num => {
+        if (el === num) {
+            cnt1++;
+        } 
+    });
+    return cnt1 > Math.floor(nums.length / 2) ? el : -1;
 };
