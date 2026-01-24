@@ -4,17 +4,12 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const obj = {};
-    
-    for(let index = 0; index < nums.length; index++)            
-    {
-        const otherPart = target - nums[index];
-        if(obj.hasOwnProperty(otherPart) && index !== obj[otherPart])
-        {
-            return [index, obj[otherPart]];
-        }
-        obj[nums[index]] = index
+    for (let i = 0; i < nums.length - 1; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }   
     }
-    
     return [];
 };
