@@ -1,21 +1,16 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} arr
  * @return {number[]}
  */
-var rearrangeArray = function(nums) {
-    let ni = 1, pi = 0, res = [];
-    
-    for(let i = 0; i < nums.length; i++)
-    {
-        if(nums[i] > 0)
-        {
-            res[pi] = nums[i];
-            pi = pi + 2;
-        }
-        else
-        {
-            res[ni] = nums[i];
-            ni = ni + 2;
+var rearrangeArray = function(arr) {
+    let res = [], p = 0, n = 1;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            res[p] = arr[i];
+            p = p + 2;
+        } else {
+            res[n] = arr[i];
+            n = n + 2;
         }
     }
     return res;
