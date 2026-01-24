@@ -17,7 +17,7 @@ var sortColors = function (nums) {
         } else if (oneCount > 0) {
             nums[i] = 1;
             oneCount--;
-        } else if (twoCount > 0) {
+        } else {
             nums[i] = 2;
             twoCount--;
         } 
