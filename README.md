@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0040-combination-sum-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/patelsiddharth/Leetcode/tree/master/0046-permutations) |
 | [0051-n-queens](https://github.com/patelsiddharth/Leetcode/tree/master/0051-n-queens) |
+| [0053-maximum-subarray](https://github.com/patelsiddharth/Leetcode/tree/master/0053-maximum-subarray) |
 | [0063-unique-paths-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0064-minimum-path-sum) |
 | [0075-sort-colors](https://github.com/patelsiddharth/Leetcode/tree/master/0075-sort-colors) |
@@ -185,6 +186,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0044-wildcard-matching](https://github.com/patelsiddharth/Leetcode/tree/master/0044-wildcard-matching) |
+| [0053-maximum-subarray](https://github.com/patelsiddharth/Leetcode/tree/master/0053-maximum-subarray) |
 | [0062-unique-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0062-unique-paths) |
 | [0063-unique-paths-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0064-minimum-path-sum) |
@@ -281,6 +283,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Divide and Conquer
 |  |
 | ------- |
+| [0053-maximum-subarray](https://github.com/patelsiddharth/Leetcode/tree/master/0053-maximum-subarray) |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
 ## Counting
 |  |
