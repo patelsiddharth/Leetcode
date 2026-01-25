@@ -3,17 +3,20 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 var rotate = function(matrix) {
-    let n = matrix.length, m = matrix[0].length
-    let res = Array(n).fill().map(() => Array(m))
-    for(let i = 0; i < n; i++) {
-        for(let j = 0; j < m; j++) {
-            res[j][m-1-i] = matrix[i][j];
+    let n = matrix.length;
+    let res = Array(n).fill().map(() => Array(n))
+    for(let i = 0; i < n - 1; i++) {
+        for(let j = i + 1; j < n; j++) {
+            [matrix[i][j], matrix[j][i]]  = [matrix[j][i], matrix[i][j]];
         }    
     }
     
     for(let i = 0; i < n; i++) {
-        for(let j = 0; j < m; j++) {
-            matrix[i][j] = res[i][j];
+        let l = 0, r = n-1;
+        while(l <= r) {
+            [matrix[i][l], matrix[i][r]] = [matrix[i][r], matrix[i][l]];
+            l++;
+            r--;
         }
     }
 };
