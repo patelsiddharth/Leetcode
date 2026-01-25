@@ -1,26 +1,20 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
 var longestConsecutive = function(nums) {
-    let obj = {}, max = 0;
-    
-    nums.forEach(num => {
-        obj[num] = obj[num] ? obj[num] + 1 : 1;
-    });
-    
-    for(let i = 0; i < nums.length; i++)
-    {
-        if(!obj[nums[i] - 1])
-        {
-            let lm = 1;
-            while(obj[nums[i] + lm])
-            {
-                lm++;
+    const set = new Set(nums);
+    let maxLen = 0;
+
+    for (let num of set) {
+        if (!set.has(num - 1)) {
+            let curr = num;
+            let count = 1;
+
+            while (set.has(curr + 1)) {
+                curr++;
+                count++;
             }
-            max = Math.max(max, lm);    
+
+            maxLen = Math.max(maxLen, count);
         }
     }
-    
-    return max;
+
+    return maxLen;
 };
