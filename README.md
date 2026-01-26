@@ -40,6 +40,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/patelsiddharth/Leetcode/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0189-rotate-array](https://github.com/patelsiddharth/Leetcode/tree/master/0189-rotate-array) |
 | [0213-house-robber-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0213-house-robber-ii) |
+| [0229-majority-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/patelsiddharth/Leetcode/tree/master/0283-move-zeroes) |
 | [0300-longest-increasing-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0300-longest-increasing-subsequence) |
@@ -135,6 +136,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0075-sort-colors](https://github.com/patelsiddharth/Leetcode/tree/master/0075-sort-colors) |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0368-largest-divisible-subset](https://github.com/patelsiddharth/Leetcode/tree/master/0368-largest-divisible-subset) |
@@ -277,6 +279,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0142-linked-list-cycle-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/patelsiddharth/Leetcode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
@@ -311,6 +314,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
+| [0229-majority-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0229-majority-element-ii) |
 ## Simulation
 |  |
 | ------- |
