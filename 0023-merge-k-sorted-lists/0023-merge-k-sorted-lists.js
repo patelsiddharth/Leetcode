@@ -9,21 +9,39 @@
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-var mergeKLists = function(lists) {
-    let arr = [];
-    for(let i = 0; i < lists.length; i++) {
-        let temp = lists[i];
-        while(temp !== null) {
-            arr.push(temp);
-            temp = temp.next;
+
+const merge = (h1, h2) => {
+    let temp1 = h1, temp2 = h2, newHead = new ListNode(0);
+    let temp = newHead;
+    while(temp1 !== null && temp2 !== null) {
+        if (temp1.val <= temp2.val) {
+            temp.next = temp1;
+            temp = temp1;
+            temp1 = temp1.next;
+        } else {
+            temp.next = temp2;
+            temp = temp2;
+            temp2 = temp2.next;
         }
+        temp.next = null;
     }
-    arr.sort((a,b) => a.val - b.val)
-    let dummy = new ListNode(0);
-    let temp = dummy;
-    for(let i = 0; i < arr.length; i++) {
-        temp.next = arr[i];
-        temp = arr[i];
+    if (temp1 !== null) {
+        temp.next = temp1;
+    } else if (temp2 !== null) {
+        temp.next = temp2;
     }
-    return dummy.next;
+    return newHead.next;
+}
+
+var mergeKLists = function(lists) {
+    let len = lists.length;
+
+    if (len === 0) return null;
+    if (len === 1) return lists[0];
+
+    for(let i = 1; i < len; i++) {
+        lists[i] = merge(lists[i - 1], lists[i]);
+    }
+    
+    return lists[len - 1];
 };
