@@ -14,17 +14,16 @@ var mergeKLists = function(lists) {
     for(let i = 0; i < lists.length; i++) {
         let temp = lists[i];
         while(temp !== null) {
-            arr.push(temp.val);
+            arr.push(temp);
             temp = temp.next;
         }
     }
-    arr.sort((a,b) => a-b)
+    arr.sort((a,b) => a.val - b.val)
     let dummy = new ListNode(0);
     let temp = dummy;
     for(let i = 0; i < arr.length; i++) {
-        let newNode = new ListNode(arr[i]);
-        temp.next = newNode;
-        temp = newNode;
+        temp.next = arr[i];
+        temp = arr[i];
     }
     return dummy.next;
 };
