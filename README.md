@@ -27,6 +27,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0081-search-in-rotated-sorted-array-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0081-search-in-rotated-sorted-array-ii) |
 | [0090-subsets-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0090-subsets-ii) |
 | [0118-pascals-triangle](https://github.com/patelsiddharth/Leetcode/tree/master/0118-pascals-triangle) |
+| [0119-pascals-triangle-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0119-pascals-triangle-ii) |
 | [0120-triangle](https://github.com/patelsiddharth/Leetcode/tree/master/0120-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/patelsiddharth/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
@@ -206,6 +207,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0072-edit-distance](https://github.com/patelsiddharth/Leetcode/tree/master/0072-edit-distance) |
 | [0115-distinct-subsequences](https://github.com/patelsiddharth/Leetcode/tree/master/0115-distinct-subsequences) |
 | [0118-pascals-triangle](https://github.com/patelsiddharth/Leetcode/tree/master/0118-pascals-triangle) |
+| [0119-pascals-triangle-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0119-pascals-triangle-ii) |
 | [0120-triangle](https://github.com/patelsiddharth/Leetcode/tree/master/0120-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/patelsiddharth/Leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
