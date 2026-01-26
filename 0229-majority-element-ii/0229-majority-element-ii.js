@@ -3,13 +3,16 @@
  * @return {number[]}
  */
 var majorityElement = function(nums) {
-    let obj = {}, count = Math.floor(nums.length / 3), res = [];
+    let obj = {}, res = [];
     nums.forEach(num => {
         obj[num] = obj[num] ? obj[num] + 1 : 1;
-        if(obj[num] === count + 1)
-        {
-            res.push(num);
-        }
     });
+
+    const target = Math.floor(nums.length / 3);
+    for(let i in obj) {
+        if (obj[i] > target) {
+            res.push(parseInt(i)); 
+        }
+    }
     return res;
 };
