@@ -3,29 +3,28 @@
  * @return {number[]}
  */
 var findMissingAndRepeatedValues = function(grid) {
-    let res = [], len = 0, sum = 0, obj = {};
+    let len = grid.length, res = [];
+    let arr = Array(len * len + 1).fill(0);
+    
     grid.forEach(nums => {
         nums.forEach(num => {
-            if (obj[num]) {
-                obj[num] += 1;    
+            if (arr[num] !== 0) {
+                arr[num] += 1;    
             } else {
-                obj[num] = 1;
-                sum += num;
+                arr[num] = 1;
             }
-            len++;
         });
     });
-
-    let repeatingNum = 0;
-    for(let i in obj) {
-        if (obj[i] === 2) {
-            repeatingNum = parseInt(i);
-            break;
+    console.log(arr)
+    let rep, nonRep;
+    for(let i = 1; i < arr.length; i++) {
+        if (arr[i] === 2) {
+            rep = i;
+        }
+        else if (arr[i] === 0) {
+            nonRep = i;
         }
     }
 
-    const ns = (len * (len + 1) / 2);
-    const nonRepeatingNum = ns - sum;
-
-    return [repeatingNum, nonRepeatingNum];
+    return [rep, nonRep];
 };
