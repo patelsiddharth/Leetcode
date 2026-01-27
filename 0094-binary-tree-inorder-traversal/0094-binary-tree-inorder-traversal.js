@@ -11,14 +11,20 @@
  * @return {number[]}
  */
 var inorderTraversal = function(root) {
-    const res = [];
-    const inorder = (node) => {
-        if (node === null) return;
-
-        inorder(node.left);
-        res.push(node.val);
-        inorder(node.right);
+    if (root === null) return [];
+    let stack = [], res = [], node = root;
+    while(true) {
+        if(node !== null) {
+            stack.push(node);
+            node = node.left;
+        } else {
+            if (stack.length === 0) {
+                break;
+            }
+            node = stack.pop();
+            res.push(node.val);
+            node = node.right;
+        }
     }
-    inorder(root);
     return res;
 };
