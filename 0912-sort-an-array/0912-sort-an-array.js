@@ -3,9 +3,6 @@
  * @return {number[]}
  */
 var sortArray = function(nums) {
-    let low = 0, high = nums.length - 1;
-    // low -> mid; mid + 1 -> high
-    
     const merge = (low, mid, high) => {
         let i = low, j = mid + 1, temp = [];
         while (i <= mid && j <= high) {
@@ -34,9 +31,7 @@ var sortArray = function(nums) {
     }
 
     const mergeSort = (low, high) => {
-        if (low >= high) {
-            return;
-        }
+        if (low >= high) return;
 
         let mid = Math.floor((low + high)/2);
         mergeSort(low, mid);
