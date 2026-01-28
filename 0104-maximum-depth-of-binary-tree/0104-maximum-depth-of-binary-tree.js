@@ -11,17 +11,12 @@
  * @return {number}
  */
 var maxDepth = function(root) {
-    if (root === null) return 0;
-    let queue = [root], height = 0;
-    while(queue.length > 0) {
-        height++;
-        let size = queue.length;
-        while(size > 0) {
-            const node = queue.shift();
-            (node.left !== null) && queue.push(node.left);
-            (node.right !== null) && queue.push(node.right);
-            size--;
-        }
+    const calHeight = (node) => {
+        if (node === null) return 0;
+
+        const left = calHeight(node.left);
+        const right = calHeight(node.right);
+        return 1 + Math.max(left, right);
     }
-    return height;
+    return calHeight(root);
 };
