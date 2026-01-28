@@ -20,9 +20,10 @@ var isBalanced = function(root) {
         if (node === null) return 0;
 
         const left = checkBalancedTree(node.left);
-        const right = checkBalancedTree(node.right);
+        if (left === -1) return -1;
 
-        if (right === -1 || left === -1) return -1;
+        const right = checkBalancedTree(node.right);
+        if (right === -1) return -1;
 
         if(Math.abs(left - right) > 1) return -1;
 
