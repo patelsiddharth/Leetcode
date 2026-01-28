@@ -11,12 +11,9 @@
  * @return {number}
  */
 var maxDepth = function(root) {
-    const calHeight = (node) => {
-        if (node === null) return 0;
+    if (root === null) return 0;
 
-        const left = calHeight(node.left);
-        const right = calHeight(node.right);
-        return 1 + Math.max(left, right);
-    }
-    return calHeight(root);
+    const left = maxDepth(root.left);
+    const right = maxDepth(root.right);
+    return 1 + Math.max(left, right);
 };
