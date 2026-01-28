@@ -62,6 +62,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/patelsiddharth/Leetcode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 | [0931-minimum-falling-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0931-minimum-falling-path-sum) |
 | [1046-last-stone-weight](https://github.com/patelsiddharth/Leetcode/tree/master/1046-last-stone-weight) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
@@ -150,6 +151,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0368-largest-divisible-subset](https://github.com/patelsiddharth/Leetcode/tree/master/0368-largest-divisible-subset) |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [1921-eliminate-maximum-number-of-monsters](https://github.com/patelsiddharth/Leetcode/tree/master/1921-eliminate-maximum-number-of-monsters) |
 | [3074-apple-redistribution-into-boxes](https://github.com/patelsiddharth/Leetcode/tree/master/3074-apple-redistribution-into-boxes) |
@@ -157,6 +159,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/patelsiddharth/Leetcode/tree/master/0023-merge-k-sorted-lists) |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 | [1046-last-stone-weight](https://github.com/patelsiddharth/Leetcode/tree/master/1046-last-stone-weight) |
 ## Linked List
 |  |
@@ -328,6 +331,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0023-merge-k-sorted-lists](https://github.com/patelsiddharth/Leetcode/tree/master/0023-merge-k-sorted-lists) |
 | [0053-maximum-subarray](https://github.com/patelsiddharth/Leetcode/tree/master/0053-maximum-subarray) |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 ## Counting
 |  |
 | ------- |
@@ -350,6 +354,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/patelsiddharth/Leetcode/tree/master/0023-merge-k-sorted-lists) |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 ## Tree
 |  |
 | ------- |
@@ -379,4 +384,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0124-binary-tree-maximum-path-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0144-binary-tree-preorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0145-binary-tree-postorder-traversal) |
+## Bucket Sort
+|  |
+| ------- |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
+## Radix Sort
+|  |
+| ------- |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
+## Counting Sort
+|  |
+| ------- |
+| [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 <!---LeetCode Topics End-->
