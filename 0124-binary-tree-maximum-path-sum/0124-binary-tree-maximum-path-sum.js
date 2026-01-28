@@ -11,22 +11,18 @@
  * @return {number}
  */
 var maxPathSum = function(root) {
-    let maxPathSum = Number.NEGATIVE_INFINITY;
-    function maxPath(node)
-    {
-        if(node === null)
-        {
-            return 0;
-        }
-        
-        let lps = Math.max(0, maxPath(node.left))
-        let rps = Math.max(0, maxPath(node.right))
-        
-        maxPathSum = Math.max(maxPathSum, node.val + lps + rps);
-        
-        return node.val + Math.max(lps, rps);
+    let max = Number.NEGATIVE_INFINITY;
+    const calH = (node) => {
+        if (node === null) return 0;
+
+        const lh = Math.max(0, calH(node.left));
+        const rh = Math.max(0, calH(node.right));
+
+        max = Math.max(max, node.val + lh + rh);
+
+        return node.val + Math.max(lh, rh);
     }
-    
-    maxPath(root);
-    return maxPathSum;
+    calH(root);
+
+    return max;
 };
