@@ -10,22 +10,24 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
+
 var isBalanced = function(root) {
-    const getHeight = function(node) {
-        if(node === null)
-            return 0;
-        
-        let lh = getHeight(node.left)
-        let rh = getHeight(node.right)
-        
-        if(lh === -1 || rh === -1)
-            return -1;
-        
-        if(Math.abs(lh - rh) > 1)
-            return -1;
-        
-        return 1 + Math.max(lh, rh)
-    }
+    if (root === null) return true;
     
-    return getHeight(root) !== -1;
+    // return height if subtree is balanced
+    // return -1 if subtree is not balanced
+    const checkBalancedTree = (node) => {
+        if (node === null) return 0;
+
+        const left = checkBalancedTree(node.left);
+        const right = checkBalancedTree(node.right);
+
+        if (right === -1 || left === -1) return -1;
+
+        if(Math.abs(left - right) > 1) return -1;
+
+        return 1 + Math.max(left, right);
+    }
+
+    return checkBalancedTree(root) !== -1;
 };
