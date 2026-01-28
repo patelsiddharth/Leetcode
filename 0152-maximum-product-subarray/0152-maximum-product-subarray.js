@@ -10,7 +10,7 @@ var maxProduct = function(nums) {
 
         prefix *= nums[i];
         suffix *= nums[len - 1 - i];
-        max = Math.max(max, Math.max(prefix, suffix));
+        max = Math.max(max, prefix, suffix);
     }
     return max;
 };
