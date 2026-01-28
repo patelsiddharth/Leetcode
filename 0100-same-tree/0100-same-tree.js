@@ -10,16 +10,14 @@
  * @param {TreeNode} p
  * @param {TreeNode} q
  * @return {boolean}
- */ 
+ */
 var isSameTree = function(p, q) {
-    function pre(node1, node2) {
-        if(node1 === null || node2 === null)
-        {
-            return node1 === node2;
-        }
-        
-        return node1.val === node2.val && pre(node1.left, node2.left) && pre(node1.right, node2.right)
+    const isSame = (node1, node2) => {
+        if (node1 === null && node2 !== null) return false;
+        if (node2 === null && node1 !== null) return false;
+        if (node1 === null && node2 === null) return true;
+        if (node1.val !== node2.val) return false;
+        return isSame(node1.left, node2.left) && isSame(node1.right, node2.right);
     }
-    
-    return pre(p, q);
+    return isSame(p, q);
 };
