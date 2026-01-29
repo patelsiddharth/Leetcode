@@ -10,7 +10,7 @@ var longestOnes = function(nums, k) {
             zc++;
         }
 
-        while(zc > k) {
+        if(zc > k) {
             if (nums[left] === 0) {
                 zc--;
             }
