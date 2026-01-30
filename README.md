@@ -120,6 +120,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0368-largest-divisible-subset](https://github.com/patelsiddharth/Leetcode/tree/master/0368-largest-divisible-subset) |
 | [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
 | [2965-find-missing-and-repeated-values](https://github.com/patelsiddharth/Leetcode/tree/master/2965-find-missing-and-repeated-values) |
+| [3178-find-the-child-who-has-the-ball-after-k-seconds](https://github.com/patelsiddharth/Leetcode/tree/master/3178-find-the-child-who-has-the-ball-after-k-seconds) |
 ## Binary Search
 |  |
 | ------- |
@@ -374,6 +375,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0054-spiral-matrix](https://github.com/patelsiddharth/Leetcode/tree/master/0054-spiral-matrix) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/patelsiddharth/Leetcode/tree/master/2149-rearrange-array-elements-by-sign) |
+| [3178-find-the-child-who-has-the-ball-after-k-seconds](https://github.com/patelsiddharth/Leetcode/tree/master/3178-find-the-child-who-has-the-ball-after-k-seconds) |
 ## Union-Find
 |  |
 | ------- |
