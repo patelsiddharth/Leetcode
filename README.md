@@ -58,6 +58,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0485-max-consecutive-ones](https://github.com/patelsiddharth/Leetcode/tree/master/0485-max-consecutive-ones) |
 | [0493-reverse-pairs](https://github.com/patelsiddharth/Leetcode/tree/master/0493-reverse-pairs) |
 | [0494-target-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0494-target-sum) |
+| [0496-next-greater-element-i](https://github.com/patelsiddharth/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0518-coin-change-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0518-coin-change-ii) |
 | [0540-single-element-in-a-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0560-subarray-sum-equals-k](https://github.com/patelsiddharth/Leetcode/tree/master/0560-subarray-sum-equals-k) |
@@ -216,6 +217,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0155-min-stack](https://github.com/patelsiddharth/Leetcode/tree/master/0155-min-stack) |
 | [0232-implement-queue-using-stacks](https://github.com/patelsiddharth/Leetcode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/0234-palindrome-linked-list) |
+| [0496-next-greater-element-i](https://github.com/patelsiddharth/Leetcode/tree/master/0496-next-greater-element-i) |
 ## String
 |  |
 | ------- |
@@ -321,6 +323,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
 | [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
+| [0496-next-greater-element-i](https://github.com/patelsiddharth/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/patelsiddharth/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0904-fruit-into-baskets](https://github.com/patelsiddharth/Leetcode/tree/master/0904-fruit-into-baskets) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/patelsiddharth/Leetcode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
@@ -461,4 +464,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0904-fruit-into-baskets](https://github.com/patelsiddharth/Leetcode/tree/master/0904-fruit-into-baskets) |
 | [1004-max-consecutive-ones-iii](https://github.com/patelsiddharth/Leetcode/tree/master/1004-max-consecutive-ones-iii) |
 | [1423-maximum-points-you-can-obtain-from-cards](https://github.com/patelsiddharth/Leetcode/tree/master/1423-maximum-points-you-can-obtain-from-cards) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0496-next-greater-element-i](https://github.com/patelsiddharth/Leetcode/tree/master/0496-next-greater-element-i) |
 <!---LeetCode Topics End-->
