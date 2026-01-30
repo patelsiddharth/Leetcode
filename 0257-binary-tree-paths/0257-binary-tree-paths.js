@@ -11,25 +11,16 @@
  * @return {string[]}
  */
 var binaryTreePaths = function(root) {
-    let res = []
-    function move(node, path) {
-        if(node === null)
-        {
+    const set = new Set();
+    const path = (node, arr) => {
+        if (node.left === null && node.right === null) {
+            arr.push(node.val);
+            set.add(arr.join('->'));
             return;
         }
-        
-        if(node.left === null && node.right === null)
-        {
-            res.push([...path, node.val].join('->'));
-            return;
-        }
-        
-        path.push(node.val)
-        move(node.left, path);
-        move(node.right, path);
-        path.pop()
+        (node.left !== null) && path(node.left, [...arr, node.val]);
+        (node.right !== null) && path(node.right, [...arr, node.val]);
     }
-    
-    move(root, []);
-    return res;
+    path(root, []);
+    return [...set];
 };
