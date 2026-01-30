@@ -11,43 +11,35 @@
  * @return {boolean}
  */
 var isSymmetric = function(root) {
-    if(root === null)
-    {
-        return true;
+    if (root === null) return true;
+
+    let queue = [{x: 0, node: root}], level = 0;
+    while(queue.length > 0) {
+        const size  = queue.length;
+        
+        if(size % 2 !== 0 && level !== 0) return false;
+        level++;
+
+        let left = 0, right = queue.length - 1;
+        while(left < right) {
+            if (
+                queue[left].node.val !== queue[right].node.val ||
+                Math.abs(queue[right].x + queue[left].x) !== 0
+            ) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        for(let i = 0; i < size; i++) {
+            const {x, node} = queue.shift();
+            if (node.left) {
+                queue.push({x: x-1, node: node.left});
+            } 
+            if (node.right) {
+                queue.push({x: x+1, node: node.right});
+            }
+        }
     }
-    
-    function move(node1, node2) {
-        if(node1 === null || node2 === null)
-        {
-            return node1 === node2;
-        }
-        
-        if((node1 !== null && node2 === null) || (node1 === null && node2 == null) || (node1 && node2 && node1.val !== node2.val))
-        {
-            return false;
-        }
-            
-        let isLeftSym = false, isRightSym = false;
-        if(node1.left && node2.right)
-        {
-            isLeftSym = move(node1.left, node2.right);
-        }
-        else if(node1.left === null && node2.right === null)
-        {
-            isLeftSym = true;
-        }
-        
-        if(node1.right && node2.left)
-        {
-           isRightSym = move(node1.right, node2.left);
-        } 
-        else if(node1.right === null && node2.left === null)
-        {
-            isRightSym = true;
-        }
-        
-        return isLeftSym && isRightSym;
-    }
-    
-    return move(root.left, root.right);
+    return true;
 };
