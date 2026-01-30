@@ -3,20 +3,19 @@
  * @return {number}
  */
 var numberOfSubstrings = function(s) {
-    let l = 0, r = 0, sum = 0, obj = {};
-    
-    while(r < s.length)
-    {
-        obj[s[r]] = obj.hasOwnProperty(s[r]) ? obj[s[r]] + 1 : 1;
-        
-        while(Object.values(obj).length === 3 && Object.values(obj).every(i => i > 0))
-        {
-            sum += (s.length - r);
-            obj[s[l]]--;
-            l++;
+    let count = 0, la = -1, lb = -1, lc = -1;
+    for(let i = 0; i < s.length; i++) {
+        if (s[i] === 'a') {
+            la = i;
+        } else if (s[i] === 'b') {
+            lb = i;
+        } else if (s[i] === 'c') {
+            lc = i;
         }
-        
-        r++;
+
+        if (la !== -1 && lb !== -1 && lc !== -1) {
+            count += Math.min(la, lb, lc) + 1;
+        }
     }
-    return sum;
-};   
+    return count;
+};
