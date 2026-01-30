@@ -13,14 +13,13 @@
  */
 var lowestCommonAncestor = function(root, p, q) {
     const path = (node) => {
-        if (node === null) return null;
-        if (node === p || node === q) return node;
+        if (!node || node === p || node === q) return node;
 
         const l = path(node.left);
         const r = path(node.right);
-        if (l === null && r === null) return null;
-        else if (l !== null && r === null) return l;
-        else if (r !== null && l === null) return r;
+        if (!l && !r) return null;
+        else if (l && !r) return l;
+        else if (!l && r) return r;
         else return node;
     }
     return path(root);
