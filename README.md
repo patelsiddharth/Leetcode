@@ -229,6 +229,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0115-distinct-subsequences](https://github.com/patelsiddharth/Leetcode/tree/master/0115-distinct-subsequences) |
 | [0125-valid-palindrome](https://github.com/patelsiddharth/Leetcode/tree/master/0125-valid-palindrome) |
 | [0131-palindrome-partitioning](https://github.com/patelsiddharth/Leetcode/tree/master/0131-palindrome-partitioning) |
+| [0257-binary-tree-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0257-binary-tree-paths) |
 | [0516-longest-palindromic-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0516-longest-palindromic-subsequence) |
 | [0583-delete-operation-for-two-strings](https://github.com/patelsiddharth/Leetcode/tree/master/0583-delete-operation-for-two-strings) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
@@ -301,6 +302,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0078-subsets](https://github.com/patelsiddharth/Leetcode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/patelsiddharth/Leetcode/tree/master/0131-palindrome-partitioning) |
+| [0257-binary-tree-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0257-binary-tree-paths) |
 | [0494-target-sum](https://github.com/patelsiddharth/Leetcode/tree/master/0494-target-sum) |
 ## Bit Manipulation
 |  |
@@ -406,6 +408,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0144-binary-tree-preorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/patelsiddharth/Leetcode/tree/master/0199-binary-tree-right-side-view) |
+| [0257-binary-tree-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0257-binary-tree-paths) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/patelsiddharth/Leetcode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## Depth-First Search
 |  |
@@ -419,6 +422,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0144-binary-tree-preorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/patelsiddharth/Leetcode/tree/master/0199-binary-tree-right-side-view) |
+| [0257-binary-tree-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0257-binary-tree-paths) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/patelsiddharth/Leetcode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## Binary Tree
 |  |
@@ -434,6 +438,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0144-binary-tree-preorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0144-binary-tree-preorder-traversal) |
 | [0145-binary-tree-postorder-traversal](https://github.com/patelsiddharth/Leetcode/tree/master/0145-binary-tree-postorder-traversal) |
 | [0199-binary-tree-right-side-view](https://github.com/patelsiddharth/Leetcode/tree/master/0199-binary-tree-right-side-view) |
+| [0257-binary-tree-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0257-binary-tree-paths) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/patelsiddharth/Leetcode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## Bucket Sort
 |  |
