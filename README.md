@@ -104,6 +104,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0234-palindrome-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/0234-palindrome-linked-list) |
 | [0283-move-zeroes](https://github.com/patelsiddharth/Leetcode/tree/master/0283-move-zeroes) |
 | [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
+| [0556-next-greater-element-iii](https://github.com/patelsiddharth/Leetcode/tree/master/0556-next-greater-element-iii) |
 | [0876-middle-of-the-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/0876-middle-of-the-linked-list) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/patelsiddharth/Leetcode/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
@@ -121,6 +122,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
 | [0368-largest-divisible-subset](https://github.com/patelsiddharth/Leetcode/tree/master/0368-largest-divisible-subset) |
 | [0509-fibonacci-number](https://github.com/patelsiddharth/Leetcode/tree/master/0509-fibonacci-number) |
+| [0556-next-greater-element-iii](https://github.com/patelsiddharth/Leetcode/tree/master/0556-next-greater-element-iii) |
 | [2965-find-missing-and-repeated-values](https://github.com/patelsiddharth/Leetcode/tree/master/2965-find-missing-and-repeated-values) |
 | [3178-find-the-child-who-has-the-ball-after-k-seconds](https://github.com/patelsiddharth/Leetcode/tree/master/3178-find-the-child-who-has-the-ball-after-k-seconds) |
 ## Binary Search
@@ -235,6 +237,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0257-binary-tree-paths](https://github.com/patelsiddharth/Leetcode/tree/master/0257-binary-tree-paths) |
 | [0424-longest-repeating-character-replacement](https://github.com/patelsiddharth/Leetcode/tree/master/0424-longest-repeating-character-replacement) |
 | [0516-longest-palindromic-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0516-longest-palindromic-subsequence) |
+| [0556-next-greater-element-iii](https://github.com/patelsiddharth/Leetcode/tree/master/0556-next-greater-element-iii) |
 | [0583-delete-operation-for-two-strings](https://github.com/patelsiddharth/Leetcode/tree/master/0583-delete-operation-for-two-strings) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [1092-shortest-common-supersequence](https://github.com/patelsiddharth/Leetcode/tree/master/1092-shortest-common-supersequence) |
