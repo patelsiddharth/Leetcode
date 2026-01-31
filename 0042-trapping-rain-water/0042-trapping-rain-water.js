@@ -10,12 +10,8 @@ var trap = function(height) {
 
     for(let i = 1; i < len; i++) {
         preMax[i] = Math.max(preMax[i - 1], height[i]);
+        suffMax[len - 1 - i] = Math.max(suffMax[len - i], height[len - 1 - i]);
     }
-
-    for(let i = len - 2; i >= 0; i--) {
-        suffMax[i] = Math.max(suffMax[i + 1], height[i]);
-    }
-    console.log(preMax, suffMax)
 
     let total = 0;
     for(let i = 0; i < len; i++) {
