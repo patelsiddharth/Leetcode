@@ -3,21 +3,19 @@
  * @return {number}
  */
 var trap = function(height) {
-    let preMax = [], suffMax = [], len = height.length;
+    let suffMax = [], len = height.length, total = 0, prevMax = height[0];
 
-    preMax[0] = height[0];
     suffMax[len - 1] = height[len - 1];
 
-    for(let i = 1; i < len; i++) {
-        preMax[i] = Math.max(preMax[i - 1], height[i]);
-        suffMax[len - 1 - i] = Math.max(suffMax[len - i], height[len - 1 - i]);
+    for(let i = len - 2; i >= 0; i--) {
+        suffMax[i] = Math.max(suffMax[i + 1], height[i]);
     }
 
-    let total = 0;
     for(let i = 0; i < len; i++) {
-        if (height[i] < preMax[i] && height[i] < suffMax[i]) {
-            total += Math.min(preMax[i], suffMax[i]) - height[i];
+        if (height[i] < prevMax && height[i] < suffMax[i]) {
+            total += Math.min(prevMax, suffMax[i]) - height[i];
         }
+        prevMax = Math.max(prevMax, height[i]);
     }
     return total;
 };
