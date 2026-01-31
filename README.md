@@ -67,6 +67,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0605-can-place-flowers](https://github.com/patelsiddharth/Leetcode/tree/master/0605-can-place-flowers) |
 | [0622-design-circular-queue](https://github.com/patelsiddharth/Leetcode/tree/master/0622-design-circular-queue) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/patelsiddharth/Leetcode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
+| [0744-find-smallest-letter-greater-than-target](https://github.com/patelsiddharth/Leetcode/tree/master/0744-find-smallest-letter-greater-than-target) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
 | [0904-fruit-into-baskets](https://github.com/patelsiddharth/Leetcode/tree/master/0904-fruit-into-baskets) |
 | [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
@@ -143,6 +144,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0349-intersection-of-two-arrays](https://github.com/patelsiddharth/Leetcode/tree/master/0349-intersection-of-two-arrays) |
 | [0493-reverse-pairs](https://github.com/patelsiddharth/Leetcode/tree/master/0493-reverse-pairs) |
 | [0540-single-element-in-a-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0540-single-element-in-a-sorted-array) |
+| [0744-find-smallest-letter-greater-than-target](https://github.com/patelsiddharth/Leetcode/tree/master/0744-find-smallest-letter-greater-than-target) |
 | [0792-binary-search](https://github.com/patelsiddharth/Leetcode/tree/master/0792-binary-search) |
 | [0907-koko-eating-bananas](https://github.com/patelsiddharth/Leetcode/tree/master/0907-koko-eating-bananas) |
 | [1004-max-consecutive-ones-iii](https://github.com/patelsiddharth/Leetcode/tree/master/1004-max-consecutive-ones-iii) |
