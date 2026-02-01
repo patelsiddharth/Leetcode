@@ -239,6 +239,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0735-asteroid-collision](https://github.com/patelsiddharth/Leetcode/tree/master/0735-asteroid-collision) |
 | [0853-car-fleet](https://github.com/patelsiddharth/Leetcode/tree/master/0853-car-fleet) |
 | [1047-remove-all-adjacent-duplicates-in-string](https://github.com/patelsiddharth/Leetcode/tree/master/1047-remove-all-adjacent-duplicates-in-string) |
+| [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/patelsiddharth/Leetcode/tree/master/1209-remove-all-adjacent-duplicates-in-string-ii) |
 ## String
 |  |
 | ------- |
@@ -259,6 +260,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [1092-shortest-common-supersequence](https://github.com/patelsiddharth/Leetcode/tree/master/1092-shortest-common-supersequence) |
 | [1143-longest-common-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/1143-longest-common-subsequence) |
+| [1209-remove-all-adjacent-duplicates-in-string-ii](https://github.com/patelsiddharth/Leetcode/tree/master/1209-remove-all-adjacent-duplicates-in-string-ii) |
 | [1312-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/patelsiddharth/Leetcode/tree/master/1312-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/patelsiddharth/Leetcode/tree/master/1358-number-of-substrings-containing-all-three-characters) |
 ## Dynamic Programming
