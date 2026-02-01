@@ -90,6 +90,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1921-eliminate-maximum-number-of-monsters](https://github.com/patelsiddharth/Leetcode/tree/master/1921-eliminate-maximum-number-of-monsters) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/patelsiddharth/Leetcode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2965-find-missing-and-repeated-values](https://github.com/patelsiddharth/Leetcode/tree/master/2965-find-missing-and-repeated-values) |
+| [3010-divide-an-array-into-subarrays-with-minimum-cost-i](https://github.com/patelsiddharth/Leetcode/tree/master/3010-divide-an-array-into-subarrays-with-minimum-cost-i) |
 | [3074-apple-redistribution-into-boxes](https://github.com/patelsiddharth/Leetcode/tree/master/3074-apple-redistribution-into-boxes) |
 ## Two Pointers
 |  |
@@ -182,6 +183,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/patelsiddharth/Leetcode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [1921-eliminate-maximum-number-of-monsters](https://github.com/patelsiddharth/Leetcode/tree/master/1921-eliminate-maximum-number-of-monsters) |
+| [3010-divide-an-array-into-subarrays-with-minimum-cost-i](https://github.com/patelsiddharth/Leetcode/tree/master/3010-divide-an-array-into-subarrays-with-minimum-cost-i) |
 | [3074-apple-redistribution-into-boxes](https://github.com/patelsiddharth/Leetcode/tree/master/3074-apple-redistribution-into-boxes) |
 ## Heap (Priority Queue)
 |  |
@@ -518,4 +520,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0496-next-greater-element-i](https://github.com/patelsiddharth/Leetcode/tree/master/0496-next-greater-element-i) |
 | [0503-next-greater-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0503-next-greater-element-ii) |
 | [0853-car-fleet](https://github.com/patelsiddharth/Leetcode/tree/master/0853-car-fleet) |
+## Enumeration
+|  |
+| ------- |
+| [3010-divide-an-array-into-subarrays-with-minimum-cost-i](https://github.com/patelsiddharth/Leetcode/tree/master/3010-divide-an-array-into-subarrays-with-minimum-cost-i) |
 <!---LeetCode Topics End-->
