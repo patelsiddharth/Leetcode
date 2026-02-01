@@ -238,6 +238,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0503-next-greater-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0503-next-greater-element-ii) |
 | [0735-asteroid-collision](https://github.com/patelsiddharth/Leetcode/tree/master/0735-asteroid-collision) |
 | [0853-car-fleet](https://github.com/patelsiddharth/Leetcode/tree/master/0853-car-fleet) |
+| [1047-remove-all-adjacent-duplicates-in-string](https://github.com/patelsiddharth/Leetcode/tree/master/1047-remove-all-adjacent-duplicates-in-string) |
 ## String
 |  |
 | ------- |
@@ -254,6 +255,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0516-longest-palindromic-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/0516-longest-palindromic-subsequence) |
 | [0556-next-greater-element-iii](https://github.com/patelsiddharth/Leetcode/tree/master/0556-next-greater-element-iii) |
 | [0583-delete-operation-for-two-strings](https://github.com/patelsiddharth/Leetcode/tree/master/0583-delete-operation-for-two-strings) |
+| [1047-remove-all-adjacent-duplicates-in-string](https://github.com/patelsiddharth/Leetcode/tree/master/1047-remove-all-adjacent-duplicates-in-string) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
 | [1092-shortest-common-supersequence](https://github.com/patelsiddharth/Leetcode/tree/master/1092-shortest-common-supersequence) |
 | [1143-longest-common-subsequence](https://github.com/patelsiddharth/Leetcode/tree/master/1143-longest-common-subsequence) |
