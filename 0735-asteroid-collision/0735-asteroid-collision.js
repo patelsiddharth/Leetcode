@@ -12,11 +12,10 @@ var asteroidCollision = function(asteroids) {
                 stack.pop();
             }
             
-            if (stack.length !== 0 && -stack[stack.length - 1] > asteroids[i]) {
-                continue;
-            }
-            if (stack.length !== 0 && -stack[stack.length - 1] === asteroids[i]) {
-                stack.pop();
+            if (stack.length !== 0 && -stack[stack.length - 1] >= asteroids[i]) {
+                if (-stack[stack.length - 1] === asteroids[i]) {
+                    stack.pop();
+                }
                 continue;
             }
 
