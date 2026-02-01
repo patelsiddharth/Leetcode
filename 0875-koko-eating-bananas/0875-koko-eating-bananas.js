@@ -4,26 +4,25 @@
  * @return {number}
  */
 var minEatingSpeed = function(piles, h) {
-    let l = 1, r = Math.max(...piles);
-    while(l <= r)
-    {
-        const mid = Math.floor((l+r)/2);
-        let totalHrs = 0;
-        for(let i = 0; i < piles.length; i++)
-        {
-            totalHrs += Math.ceil(piles[i] / mid);
-            if(totalHrs > h)
-            {
-                l = mid + 1;
-                break;
-            }
+    let left = 1, right = Math.max(...piles), res = 0;
+    
+    const getHours = (speed) => {
+        let time = 0;
+        for (let i = 0; i < piles.length; i++) {
+            time += Math.ceil(piles[i]/speed);
         }
-        
-        if(totalHrs <= h)
-        {
-            r = mid - 1;
+        return time;
+    }
+
+    while(left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        const hourToEatAllBanana = getHours(mid);
+        if (hourToEatAllBanana <= h) {
+            res = mid;
+            right = mid - 1;
+        } else {
+            left = mid + 1;
         }
     }
-    
-    return l;
+    return res;
 };
