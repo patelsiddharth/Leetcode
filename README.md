@@ -82,6 +82,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/patelsiddharth/Leetcode/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1046-last-stone-weight](https://github.com/patelsiddharth/Leetcode/tree/master/1046-last-stone-weight) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
+| [1200-minimum-absolute-difference](https://github.com/patelsiddharth/Leetcode/tree/master/1200-minimum-absolute-difference) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/patelsiddharth/Leetcode/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1299-replace-elements-with-greatest-element-on-right-side](https://github.com/patelsiddharth/Leetcode/tree/master/1299-replace-elements-with-greatest-element-on-right-side) |
 | [1423-maximum-points-you-can-obtain-from-cards](https://github.com/patelsiddharth/Leetcode/tree/master/1423-maximum-points-you-can-obtain-from-cards) |
@@ -185,6 +186,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/patelsiddharth/Leetcode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1048-longest-string-chain](https://github.com/patelsiddharth/Leetcode/tree/master/1048-longest-string-chain) |
+| [1200-minimum-absolute-difference](https://github.com/patelsiddharth/Leetcode/tree/master/1200-minimum-absolute-difference) |
 | [1921-eliminate-maximum-number-of-monsters](https://github.com/patelsiddharth/Leetcode/tree/master/1921-eliminate-maximum-number-of-monsters) |
 | [3010-divide-an-array-into-subarrays-with-minimum-cost-i](https://github.com/patelsiddharth/Leetcode/tree/master/3010-divide-an-array-into-subarrays-with-minimum-cost-i) |
 | [3074-apple-redistribution-into-boxes](https://github.com/patelsiddharth/Leetcode/tree/master/3074-apple-redistribution-into-boxes) |
