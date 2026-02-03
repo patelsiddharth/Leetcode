@@ -42,6 +42,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0154-find-minimum-in-rotated-sorted-array-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0154-find-minimum-in-rotated-sorted-array-ii) |
 | [0162-find-peak-element](https://github.com/patelsiddharth/Leetcode/tree/master/0162-find-peak-element) |
+| [0164-maximum-gap](https://github.com/patelsiddharth/Leetcode/tree/master/0164-maximum-gap) |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/patelsiddharth/Leetcode/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0189-rotate-array](https://github.com/patelsiddharth/Leetcode/tree/master/0189-rotate-array) |
@@ -177,6 +178,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0056-merge-intervals](https://github.com/patelsiddharth/Leetcode/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/patelsiddharth/Leetcode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/patelsiddharth/Leetcode/tree/master/0088-merge-sorted-array) |
+| [0164-maximum-gap](https://github.com/patelsiddharth/Leetcode/tree/master/0164-maximum-gap) |
 | [0169-majority-element](https://github.com/patelsiddharth/Leetcode/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/patelsiddharth/Leetcode/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/patelsiddharth/Leetcode/tree/master/0268-missing-number) |
@@ -491,10 +493,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Bucket Sort
 |  |
 | ------- |
+| [0164-maximum-gap](https://github.com/patelsiddharth/Leetcode/tree/master/0164-maximum-gap) |
 | [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 ## Radix Sort
 |  |
 | ------- |
+| [0164-maximum-gap](https://github.com/patelsiddharth/Leetcode/tree/master/0164-maximum-gap) |
 | [0912-sort-an-array](https://github.com/patelsiddharth/Leetcode/tree/master/0912-sort-an-array) |
 ## Counting Sort
 |  |
