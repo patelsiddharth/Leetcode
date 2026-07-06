@@ -6,16 +6,14 @@
 var rotate = function(nums, k) {
     const swap = (i, j) => {
         while(i <= j) {
-            const temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
+            [nums[i], nums[j]] = [nums[j], nums[i]];
             i++;
             j--;
         }
     }
-    let len = nums.length;
-    k = k % len;
-    swap(0, len - 1 - k);
-    swap(len - k, len - 1);
-    swap(0, len - 1);
+    const len = nums.length - 1;
+    k = k % (len + 1);
+    swap(0, len - k);
+    swap(len - k + 1, len);
+    swap(0, len);
 };
