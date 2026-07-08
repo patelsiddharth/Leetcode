@@ -3,14 +3,10 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    let obj = {};
-    for (let i = 0; i < nums.length; i++) {
-        obj[nums[i]] = 1;
+    let sum = 0; n = nums.length;
+    for (let i = 0; i < n; i++) {
+        sum += nums[i];
     }
-    for(let i = 0; i < nums.length + 1; i++) {
-        if (!obj[i]) {
-            return i;
-        }
-    }
-    return -1;
+    const sumN = (n * (n + 1))/2
+    return sumN - sum;
 };
