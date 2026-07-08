@@ -3,11 +3,15 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let xor = 0;
-   
+    let obj = {}, res = -1;
     nums.forEach(num => {
-        xor = xor ^ num
+        obj[num] = obj[num] ? obj[num] + 1 : 1
     });
-    
-    return xor
+    Object.entries(obj).forEach(([key, val]) => {
+        if (val === 1) {
+            res = key;
+            return;
+        }
+    });
+    return +res;
 };
