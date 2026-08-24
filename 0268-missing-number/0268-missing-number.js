@@ -3,15 +3,15 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    const n = nums.length;
+    let n = nums.length, xor1, xor2;
     const arr = new Array(n+1);
     nums.forEach(num => {
-        arr[num] = 1;
+        xor2 ^= num
     })
     for(let i = 0; i < n+1; i++) {
-        if (arr[i] === undefined) {
-            return i;
-        }
+        arr[i] = i;
+        xor1 ^= i;
     }
-    return 0;
+
+    return xor1 ^ xor2;
 };
