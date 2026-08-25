@@ -3,9 +3,9 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let xor = 0;
-    nums.forEach(num => {
-        xor = xor ^ num;
-    });
-    return xor;
+    let res = 0;
+    for(let i = 0; i < nums.length; i++) {
+        res ^= nums[i];
+    }
+    return res;
 };
