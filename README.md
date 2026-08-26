@@ -541,4 +541,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [3010-divide-an-array-into-subarrays-with-minimum-cost-i](https://github.com/patelsiddharth/Leetcode/tree/master/3010-divide-an-array-into-subarrays-with-minimum-cost-i) |
+## Quicksort
+|  |
+| ------- |
+| [0075-sort-colors](https://github.com/patelsiddharth/Leetcode/tree/master/0075-sort-colors) |
+## Bubble Sort
+|  |
+| ------- |
+| [0075-sort-colors](https://github.com/patelsiddharth/Leetcode/tree/master/0075-sort-colors) |
 <!---LeetCode Topics End-->
