@@ -11,5 +11,5 @@ var majorityElement = function(nums) {
             count = obj[num];
         }
     });
-    return +res;
+    return res;
 };
