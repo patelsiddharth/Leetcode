@@ -1,16 +1,17 @@
 /**
- * @param {number[]} arr
+ * @param {number[]} nums
  * @return {number[]}
  */
-var rearrangeArray = function(arr) {
-    let res = [], p = 0, n = 1;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 0) {
-            res[p] = arr[i];
-            p = p + 2;
+var rearrangeArray = function(nums) {
+    let odd = 1, even = 0, res = [];
+    for(let i = 0; i < nums.length; i++) {
+        const isPos = nums[i] >= 0;
+        if (isPos) {
+            res[even] = nums[i];
+            even += 2;
         } else {
-            res[n] = arr[i];
-            n = n + 2;
+            res[odd] = nums[i];
+            odd += 2;
         }
     }
     return res;
