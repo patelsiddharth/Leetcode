@@ -3,10 +3,20 @@
  * @return {number[]}
  */
 var replaceElements = function(arr) {
-    let n = arr.length, res = [];
-    res[n-1] = -1;
-    for(let i = n-2; i>= 0; i--) {
-        res[i] = Math.max(res[i + 1], arr[i + 1]);
+    let len = arr.length;
+    let max = arr[len - 1];
+    let res = [-1];
+    for(let i = len - 2; i >= 0; i--) {
+        res.push(max);
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    let i = 0; j = len - 1;
+    while(i <= j) {
+        [res[i], res[j]] = [res[j], res[i]];
+        i++;
+        j--;
     }
     return res;
 };
