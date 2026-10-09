@@ -3,37 +3,23 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 var setZeroes = function(matrix) {
-    let n = matrix.length, m = matrix[0].length, col0 = 1;
-
-    for(let i = 0; i < n; i++) {
-        for(let j = 0; j < m; j++) {
+    let rowArr = new Array(matrix.length).fill(1);
+    let colArr = new Array(matrix[0].length).fill(1);
+    
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[0].length; j++) {
             if (matrix[i][j] === 0) {
-                matrix[i][0] = 0;
-                if (j !== 0) {
-                    matrix[0][j] = 0;
-                } else {
-                    col0 = 0;
-                }
+                rowArr[j] = 0;
+                colArr[i] = 0;
             }
         }
     }
-    for(let i = 1; i < n; i++) {
-        for(let j = 1; j < m; j++) {
-            if (matrix[i][0] === 0 || matrix[0][j] === 0) {
+
+    for(let i = 0; i < matrix.length; i++) {
+        for(let j = 0; j < matrix[0].length; j++) {
+            if (rowArr[j] === 0 || colArr[i] === 0) {
                 matrix[i][j] = 0;
             }
-        }
-    }
-
-    if (matrix[0][0] === 0) {
-        for(let j = 0; j < m; j++) {
-            matrix[0][j] = 0;
-        }
-    }
-
-    if (col0 === 0) {
-        for(let i = 0; i < n; i++) {
-            matrix[i][0] = 0;
         }
     }
 };
