@@ -4,19 +4,16 @@
  */
 var rotate = function(matrix) {
     let n = matrix.length;
-    let res = Array(n).fill().map(() => Array(n))
-    for(let i = 0; i < n - 1; i++) {
-        for(let j = i + 1; j < n; j++) {
-            [matrix[i][j], matrix[j][i]]  = [matrix[j][i], matrix[i][j]];
-        }    
+    let newMat = Array(n).fill().map(() => Array(n));
+
+    for(let row = 0; row < n; row++) {
+        for(let col = 0; col < n; col++) {
+            newMat[col][n - 1 - row] = matrix[row][col];
+        }
     }
-    
-    for(let i = 0; i < n; i++) {
-        let l = 0, r = n-1;
-        while(l <= r) {
-            [matrix[i][l], matrix[i][r]] = [matrix[i][r], matrix[i][l]];
-            l++;
-            r--;
+    for(let row = 0; row < n; row++) {
+        for(let col = 0; col < n; col++) {
+            matrix[row][col] = newMat[row][col]
         }
     }
 };
