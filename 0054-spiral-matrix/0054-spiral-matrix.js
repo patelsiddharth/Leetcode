@@ -3,36 +3,37 @@
  * @return {number[]}
  */
 var spiralOrder = function(matrix) {
-    let res = [], n = matrix.length, m = matrix[0].length;
-    let top = 0, left = 0, right = m - 1, bottom = n - 1;
-    
-    while(top <= bottom && left <= right) {
-        // Top
-        for(let i = left; i <= right; i++) {
-            res.push(matrix[top][i]);
-        }
-        top++;
+    let res = [], m = matrix.length, n = matrix[0].length;
+    let colStart = 0, colEnd = n - 1;
+    let rowStart = 0, rowEnd = m - 1;
 
-        // Right
-        for(let i = top; i <= bottom; i++) {
-            res.push(matrix[i][right]);
+    while(colStart <= colEnd && rowStart <= rowEnd) {
+        // left to right
+        for(let col = colStart; col <= colEnd; col++) {
+            res.push(matrix[rowStart][col]);
         }
-        right--;
+        rowStart++;
 
-        // Bottom
-        if (top <= bottom) {
-            for(let i = right; i >= left; i--) {
-                res.push(matrix[bottom][i]);
+        // top to bottom
+        for (let row = rowStart; row <= rowEnd; row++) {
+            res.push(matrix[row][colEnd]);
+        }
+        colEnd--;
+
+        // right to left
+        if (rowStart <= rowEnd) {
+            for(let col = colEnd; col >= colStart; col--) {
+                res.push(matrix[rowEnd][col]);
             }
-            bottom--;
+            rowEnd--;
         }
 
-        // Left
-        if (left <= right) {
-            for(let i = bottom; i >= top; i--) {
-                res.push(matrix[i][left]);
+        // bottm to top
+        if (colStart <= colEnd) {
+            for (let row = rowEnd; row >= rowStart; row--) {
+                res.push(matrix[row][colStart])
             }
-            left++;
+            colStart++;
         }
     }
     return res;
